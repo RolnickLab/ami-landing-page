@@ -1,0 +1,23 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  max-width: 420px;
+  text-align: center;
+  color: var(--text);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.logo {
+  object-fit: contain;
+}

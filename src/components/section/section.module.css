@@ -1,0 +1,20 @@
+.section {
+  background-color: var(--background);
+  padding: 100px 50px;
+}
+
+.tinted {
+  background-color: var(--background-tinted);
+  background-size: 20px 20px;
+  background-image: linear-gradient(
+      to right,
+      var(--border) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+}

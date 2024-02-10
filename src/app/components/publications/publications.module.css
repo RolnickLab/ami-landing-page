@@ -1,0 +1,16 @@
+.publications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+
+.publication span {
+  display: block;
+}
+
+.publication a {
+  color: var(--text-link);
+  font-weight: 500;
+}
