@@ -26,3 +26,26 @@
   text-align: right;
   align-items: flex-end;
 }
+
+@media (max-width: 768px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--background);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .image {
+    border-radius: 0;
+  }
+
+  .content,
+  .project.reverse .content {
+    padding: 20px;
+    align-items: stretch;
+    text-align: left;
+  }
+}

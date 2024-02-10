@@ -15,9 +15,10 @@
 
 .person {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .image {
@@ -26,4 +27,28 @@
   border-radius: 75px;
   background-color: var(--background);
   border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    align-items: stretch;
+  }
+
+  .persons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .person {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    text-align: left;
+  }
+
+  .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
 }

@@ -10,8 +10,10 @@ export const Contact = () => (
         <div key={index} className={styles.person}>
           <div className={styles.image} />
           <Spacer size={20} />
-          <p className="bodyLarge">{contact.name}</p>
-          <p className="body">{contact.jobTitle}</p>
+          <div>
+            <p className="bodyLarge">{contact.name}</p>
+            <p className="body">{contact.jobTitle}</p>
+          </div>
         </div>
       ))}
     </div>

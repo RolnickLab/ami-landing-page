@@ -27,3 +27,13 @@
   color: var(--text-low-contrast);
   opacity: 0.2;
 }
+
+@media (max-width: 768px) {
+  .about {
+    gap: 50px;
+  }
+
+  .block {
+    gap: 0;
+  }
+}

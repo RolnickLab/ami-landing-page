@@ -13,7 +13,7 @@ export const Intro = () => (
     <p className={classNames("bodyExtraLarge", styles.title)}>
       Platform for long-term automated monitoring of insects
     </p>
-    <Spacer size={100} />
+    <Spacer size={100} expand />
     <p className={classNames("body", styles.subTitle)}>By partners from</p>
     <Spacer size={20} />
     <div className={styles.logos}>

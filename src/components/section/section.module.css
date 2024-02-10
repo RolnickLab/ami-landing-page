@@ -18,3 +18,9 @@
   max-width: 720px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 20px;
+  }
+}

@@ -17,7 +17,7 @@ export const About = () => (
               {section.blocks.map((block, index) => (
                 <div key={index} className={styles.block}>
                   <p className={classNames("heading1", styles.number)}>
-                    {index}
+                    {index + 1}
                   </p>
                   <p className="bodyLarge">{block}</p>
                 </div>
