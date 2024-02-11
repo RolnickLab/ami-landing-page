@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { AMILogo } from "@/components/ami-logo/ami-logo";
 import { Spacer } from "@/components/spacer/spacer";
@@ -46,11 +47,9 @@ export const Intro = () => {
       <div className={styles.logos}>
         {data.partners.map((partner, index) => (
           <Link key={index} href={partner.href}>
-            <Image
+            <img
               alt={partner.label}
               src={partner.logo}
-              width={200}
-              height={100}
               className={styles.logo}
             />
           </Link>

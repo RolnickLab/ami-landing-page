@@ -20,6 +20,8 @@
 
 .logo {
   object-fit: contain;
+  height: 100px;
+  max-width: 200px;
 }
 
 @media (max-width: 768px) {
