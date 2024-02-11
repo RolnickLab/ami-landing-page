@@ -83,3 +83,7 @@ export default function Project() {
     </>
   );
 }
+
+export function generateStaticParams() {
+  return [{ slug: "example" }];
+}
