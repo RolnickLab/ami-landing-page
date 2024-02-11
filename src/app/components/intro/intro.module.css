@@ -6,7 +6,7 @@
 }
 
 .title {
-  max-width: 420px;
+  max-width: 480px;
   text-align: center;
   color: var(--text);
 }
@@ -23,8 +23,12 @@
 }
 
 @media (max-width: 768px) {
+  .title {
+    max-width: 320px;
+  }
+
   .logos {
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
   }
 }

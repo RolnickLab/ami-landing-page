@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { ButtonLink } from "@/components/button/button";
 import { Section } from "@/components/section/section";
-import styles from "./page.module.css";
 import { Spacer } from "@/components/spacer/spacer";
-import Link from "next/link";
 import classNames from "classnames";
+import Link from "next/link";
+import styles from "./page.module.css";
 
-export default function Project() {
+export default function Page() {
   return (
     <>
       <Section tinted>

@@ -5,7 +5,7 @@ import { Contact } from "./components/contact/contact";
 import { Projects } from "./components/projects/projects";
 import { Publications } from "./components/publications/publications";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Section tinted>
