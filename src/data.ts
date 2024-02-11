@@ -40,21 +40,21 @@ export const data = {
   projects: [
     {
       image: "/ami-trap.jpeg",
-      title: "AMI Trap",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ex at nulla sollicitudin vehicula. Etiam elementum enim sed maximus rhoncus. Aenean facilisis porttitor dui ut pulvinar.",
-      href: "/",
+      title: "UKCEH AMI-trap",
+      text: "Combining robust lighting for attracting insects with high resolution cameras, the AMI-trap can provide practical and cost-effective solutions for standardised monitoring.",
+      href: "/project/example",
     },
     {
       image: "/ami-companion.jpg",
       title: "AMI Data Companion",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ex at nulla sollicitudin vehicula. Etiam elementum enim sed maximus rhoncus. Aenean facilisis porttitor dui ut pulvinar.",
-      href: "/",
+      href: "/project/example",
     },
     {
       image: "/ami-offline.jpeg",
       title: "ADC Offline",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ex at nulla sollicitudin vehicula. Etiam elementum enim sed maximus rhoncus. Aenean facilisis porttitor dui ut pulvinar.",
-      href: "/",
+      href: "/project/example",
     },
   ],
   publications: [
