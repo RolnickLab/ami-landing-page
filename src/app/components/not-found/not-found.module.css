@@ -4,13 +4,13 @@
   align-items: center;
   justify-content: center;
   max-width: 420px;
-  min-height: calc(100vh - 264px);
+  min-height: calc(100vh - 260px);
   margin: 0 auto;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .notFound {
-    min-height: calc(100vh - 164px);
+    min-height: calc(100vh - 160px);
   }
 }

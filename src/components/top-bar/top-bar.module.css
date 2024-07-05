@@ -2,13 +2,49 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
-  padding: 0 20px;
+  height: 60px;
+  padding: 0 40px;
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
+}
+
+.menuItem {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.menuItem:hover {
+  opacity: 1;
+}
+
+.menuItem:hover .line {
+  display: block;
+}
+
+.menuItem.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.menuItem.active .line {
+  display: block;
+  background-color: var(--text-link);
+}
+
+.line {
+  display: none;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -10px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--text);
 }

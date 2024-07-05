@@ -1,7 +1,7 @@
 import { About } from "@/app/components/about/about";
 import { Intro } from "@/app/components/intro/intro";
 import { Section } from "@/components/section/section";
-import { Contact } from "./components/contact/contact";
+import { Media } from "./components/media/media";
 import { Projects } from "./components/projects/projects";
 import { Publications } from "./components/publications/publications";
 
@@ -21,7 +21,7 @@ export default function Page() {
         <Publications />
       </Section>
       <Section tinted>
-        <Contact />
+        <Media />
       </Section>
     </>
   );

@@ -1,20 +1,35 @@
+import { Spacer } from "@/components/spacer/spacer";
 import { data } from "@/data";
-import classNames from "classnames";
-import Link from "next/link";
 import styles from "./publications.module.css";
+import { ButtonLink } from "@/components/button/button";
 
 export const Publications = () => (
-  <div className={styles.publications}>
-    <h1 className="heading1">Related publications</h1>
-    {data.publications.map((publication, index) => (
-      <p key={index} className={classNames("body", styles.publication)}>
-        <span>{publication.year}</span>
-        <span>
-          <Link href={publication.href}>{publication.title}</Link>
-        </span>
-        <span>{publication.publisher}</span>
-        <span>{publication.authors}</span>
-      </p>
-    ))}
+  <div>
+    <h1 className="heading1">Resources</h1>
+    <Spacer size={20} />
+    <div className={styles.resources}>
+      {data.resources.map((resource, index) => (
+        <div key={index} className={styles.listItem}>
+          <h2 className="heading2">{resource.title}</h2>
+          <Spacer size={20} />
+          <p className="body">{resource.description}</p>
+          <Spacer size={20} />
+          <ButtonLink label="Learn more" href={resource.href} />
+        </div>
+      ))}
+    </div>
+    <Spacer size={80} />
+    <h2 className="heading2">Academic Publications</h2>
+    <Spacer size={20} />
+    <div className={styles.publications}>
+      {data.publications.map((publication, index) => (
+        <div key={index} className={styles.listItem}>
+          <p className="body">
+            <a href={publication.href}>{publication.title}</a>
+          </p>
+          <p className="body">{publication.description}</p>
+        </div>
+      ))}
+    </div>
   </div>
 );

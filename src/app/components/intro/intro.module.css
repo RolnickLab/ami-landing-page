@@ -2,13 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 264px);
+  min-height: calc(100vh - 260px);
 }
 
-.title {
-  max-width: 480px;
+.introText {
   text-align: center;
-  color: var(--text);
 }
 
 .logos {
@@ -25,10 +23,6 @@
 }
 
 @media (max-width: 768px) {
-  .title {
-    max-width: 320px;
-  }
-
   .logos {
     flex-direction: column;
     gap: 0;

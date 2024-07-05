@@ -1,16 +1,15 @@
-.publications {
+.publications a {
+  color: var(--text-link);
+  font-weight: 500;
+}
+
+.listItem {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
+  padding: 20px 0;
 }
 
-.publication span {
-  display: block;
-}
-
-.publication a {
-  color: var(--text-link);
-  font-weight: 500;
+.listItem:not(:last-child) {
+  border-bottom: 1px solid var(--border);
 }

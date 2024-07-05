@@ -1,0 +1,13 @@
+.media {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.content iframe {
+  border-radius: 10px;
+}

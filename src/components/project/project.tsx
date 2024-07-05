@@ -22,7 +22,7 @@ export const Project = ({
     <div className={styles.content}>
       <h2 className="heading2">{data.title}</h2>
       <p className="body">{data.text}</p>
-      <ButtonLink label="Read more" href={data.href} />
+      <ButtonLink label="Learn more" href={data.href} />
     </div>
   </div>
 );

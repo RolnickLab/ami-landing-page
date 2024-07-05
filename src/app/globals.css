@@ -2,7 +2,7 @@
   /* Colors */
   --background: #ffffff;
   --background-tinted: #f4f8fe80;
-  --background-button: #09af8a;
+  --background-button: #5f8ac6;
   --text: #222426;
   --text-low-contrast: #6f7172;
   --text-button: #ffffff;
@@ -48,6 +48,22 @@ a:hover {
   line-height: 32px;
   font-weight: 600;
   margin: 0;
+}
+
+.bodyExtraSmall {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--text-low-contrast);
+}
+
+.bodySmall {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--text-low-contrast);
 }
 
 .body {

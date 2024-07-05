@@ -5,7 +5,6 @@ import { Spacer } from "@/components/spacer/spacer";
 import { data } from "@/data";
 import { animated, config, useSpring } from "@react-spring/web";
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./intro.module.css";
 
@@ -19,7 +18,7 @@ export const Intro = () => {
     []
   );
 
-  const [titleSprings] = useSpring(
+  const [introTextSprings] = useSpring(
     () => ({
       from: { opacity: 0, y: 100 },
       to: { opacity: 1, y: 0 },
@@ -32,28 +31,32 @@ export const Intro = () => {
   return (
     <div className={styles.intro}>
       <animated.div style={logoSprings}>
-        <AMILogo size={200} />
+        <AMILogo size={250} />
       </animated.div>
       <Spacer size={20} />
-      <animated.p
-        className={classNames("bodyExtraLarge", styles.title)}
-        style={titleSprings}
-      >
-        Platform for long-term automated monitoring of insects
-      </animated.p>
-      <Spacer size={100} expand />
-      <p className={classNames("body", styles.subTitle)}>By partners from</p>
+      <animated.div className={styles.introText} style={introTextSprings}>
+        <h1 className="heading2">Automated Monitoring of Insects</h1>
+        <Spacer size={10} />
+        <h2 className="bodyLarge">
+          Timestamped, Geolocated, and Labelled <br />
+          Observational Insect Data
+        </h2>
+      </animated.div>
+      <Spacer size={150} expand />
+      <p className="body">By partners from</p>
       <Spacer size={20} />
       <div className={styles.logos}>
-        {data.partners.map((partner, index) => (
-          <Link key={index} href={partner.href}>
-            <img
-              alt={partner.label}
-              src={partner.logo}
-              className={styles.logo}
-            />
-          </Link>
-        ))}
+        {data.partners
+          .filter((partner) => partner.logo && partner.href)
+          .map((partner, index) => (
+            <Link key={index} href={partner.href as string}>
+              <img
+                alt={partner.label}
+                src={partner.logo}
+                className={styles.logo}
+              />
+            </Link>
+          ))}
       </div>
     </div>
   );
