@@ -9,12 +9,11 @@ export const Projects = () => (
       <h1 className="heading1">The AMI System</h1>
       <Spacer size={20} />
       <p className="bodyLarge">
-        As a system, AMI provides support throughout the lifecycle of the data:
-        the hardware that captures images, the software to process the images
-        and classify each observed species, and tools to aid in the rigorous
-        analysis of the AMI datasets. All services are available à la carte:
-        each component can be opted in or out. It currently focuses on moth
-        monitoring.
+        The AMI System covers the entire lifecycle of the data: the hardware to
+        capture images, the software to process and classify the images, and
+        tools to aid in the rigorous analysis of AMI datasets. All services are
+        <i>à la carte</i>: each can be opted in or out. AMI currently focuses on
+        moth monitoring.
       </p>
     </div>
     {data.projects.map((project, index) => (

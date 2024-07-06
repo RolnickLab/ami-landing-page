@@ -27,7 +27,8 @@ export const Publications = () => (
           <p className="body">
             <a href={publication.href}>{publication.title}</a>
           </p>
-          <p className="body">{publication.description}</p>
+          <Spacer size={10} />
+          <p className="bodySmall">{publication.description}</p>
         </div>
       ))}
     </div>

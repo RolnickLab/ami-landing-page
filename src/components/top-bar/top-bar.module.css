@@ -15,9 +15,6 @@
 
 .menuItem {
   position: relative;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 500;
 }
 
 .menuItem:hover {

@@ -4,7 +4,6 @@ import { AMILogo } from "@/components/ami-logo/ami-logo";
 import { Spacer } from "@/components/spacer/spacer";
 import { data } from "@/data";
 import { animated, config, useSpring } from "@react-spring/web";
-import classNames from "classnames";
 import Link from "next/link";
 import styles from "./intro.module.css";
 
@@ -31,19 +30,18 @@ export const Intro = () => {
   return (
     <div className={styles.intro}>
       <animated.div style={logoSprings}>
-        <AMILogo size={250} />
+        <AMILogo size={200} />
       </animated.div>
       <Spacer size={20} />
       <animated.div className={styles.introText} style={introTextSprings}>
-        <h1 className="heading2">Automated Monitoring of Insects</h1>
+        <h1 className="heading1">Automated Monitoring of Insects</h1>
         <Spacer size={10} />
         <h2 className="bodyLarge">
-          Timestamped, Geolocated, and Labelled <br />
-          Observational Insect Data
+          Timestamped, Geolocated, and Labelled Observational Insect Data
         </h2>
       </animated.div>
       <Spacer size={150} expand />
-      <p className="body">By partners from</p>
+      <p className="label">By partners from</p>
       <Spacer size={20} />
       <div className={styles.logos}>
         {data.partners

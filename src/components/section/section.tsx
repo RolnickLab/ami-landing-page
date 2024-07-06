@@ -9,7 +9,11 @@ export const Section = ({
   children: ReactNode;
   tinted?: boolean;
 }) => (
-  <div className={classNames(styles.section, { [styles.tinted]: tinted })}>
+  <div
+    className={classNames(styles.section, {
+      [styles.tinted]: tinted,
+    })}
+  >
     <div className={styles.content}>{children}</div>
   </div>
 );
