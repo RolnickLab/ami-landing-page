@@ -78,19 +78,19 @@
     "description": "The AMI System covers the entire lifecycle of the data: the hardware to capture images, the software to process and classify the images, and tools to aid in the rigorous analysis of AMI datasets. All services are <i>à la carte</i>: each can be opted in or out. AMI currently focuses on moth monitoring.",
     "list": [
       {
-        "image": "/ami-trap.jpeg",
+        "image": "/hardware.png",
         "title": "Hardware",
         "text": "The UKCEH AMI Biorecorder consists of UV and white lights for attracting moths, high-capacity data storage to collate images over long sampling periods, battery and solar power to allow for deployment away from mains power, and customisable sampling schedules. Images collected can be processed through one’s own workflow or using the Mila AMI Data Platform.",
         "href": "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap"
       },
       {
-        "image": "/ami-companion.jpg",
+        "image": "/data-management.png",
         "title": "Data management",
         "text": "The Mila AMI Data Platform and its offline Data Companion utilize machine learning (ML) to automatically and efficiently organise large amounts of data. It is device-agnostic and can be used for images taken by any camera. It rapidly performs fine-grained species classification and new species discovery using the GBIF and Darwin Core Standards. Experts review the classifications and rectify them as needed, thereby improving the accuracy of the algorithms. The Mila AMI Data Platform and its Companion are open source and have been developed in collaboration with AMI Consortium Partners (see GitHub repository for list of contributors). Public contributions to improve its performance and/or to enrich its offerings are most welcome.",
         "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
       },
       {
-        "image": "/ami-offline.jpeg",
+        "image": "/analytical-toolbox.png",
         "title": "Analytical Toolbox",
         "text": "The Mila AMI Data Platform provides the ability to browse, filter and sort images publicly shared by users. The Platform continuously deploys additional functionalities to support data analysis, such as dataset downloading as a file or programmatically through an API, or data visualisations and coding libraries for analysis (under development). The AMI Consortium will share its methodological research results and best analytical practices for AMI datasets.",
         "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"

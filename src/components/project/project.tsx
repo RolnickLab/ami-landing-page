@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Image from "next/image";
 import { ExternalLinkButton } from "../button/button";
 import styles from "./project.module.css";
 
@@ -15,9 +16,12 @@ export const Project = ({
   reverse?: boolean;
 }) => (
   <div className={classNames(styles.project, { [styles.reverse]: reverse })}>
-    <div
+    <Image
+      src={data.image}
+      alt=""
+      width={0}
+      height={0}
       className={styles.image}
-      style={{ backgroundImage: `url(${data.image})` }}
     />
     <div className={styles.content}>
       <h2 className="heading2">{data.title}</h2>

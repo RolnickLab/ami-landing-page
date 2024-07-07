@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Intro } from "@/components/intro/intro";
 import { List, ListItem } from "@/components/list/list";
 import { Project } from "@/components/project/project";
@@ -6,6 +5,7 @@ import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
 import content from "@/content.json";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -22,17 +22,17 @@ export default function Page() {
         </p>
         <Spacer size={50} />
         <div className={styles.logos}>
-          {content.partners
-            .filter((partner) => partner.logo && partner.href)
-            .map((partner, index) => (
-              <Link key={index} href={partner.href as string}>
-                <img
-                  alt={partner.label}
-                  src={partner.logo}
-                  className={styles.logo}
-                />
-              </Link>
-            ))}
+          {content.partners.map((partner, index) => (
+            <Link key={index} href={partner.href as string}>
+              <Image
+                src={partner.logo}
+                alt={partner.label}
+                width={0}
+                height={0}
+                className={styles.logo}
+              />
+            </Link>
+          ))}
         </div>
       </Section>
 

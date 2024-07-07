@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" type="image/png" href="/ami-logo.png" />
+      <link rel="icon" type="image/png" href="/logo.png" />
       <body className={inter.className}>
         <TopBar />
         <main>{children}</main>

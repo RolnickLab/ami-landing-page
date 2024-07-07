@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import { List, ListItem } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import content from "@/content.json";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -27,7 +27,13 @@ export default function Page() {
         </List>
       </Section>
       <Section theme="tinted">
-        <img src="/ami-people.jpg" alt="" width="100%" />
+        <Image
+          src="/people.jpg"
+          alt=""
+          width={1999}
+          height={1500}
+          style={{ width: "100%", height: "auto" }}
+        />
         <Spacer size={10} />
         <p className="bodySmall">
           April 2024, Gathering hosted by Aarhus University

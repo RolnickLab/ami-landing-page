@@ -16,9 +16,8 @@
 }
 
 .logo {
-  object-fit: contain;
-  height: 100px;
-  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 720px) {
@@ -32,8 +31,6 @@
   }
 
   .logo {
-    object-fit: contain;
-    height: 50px;
     max-width: 100px;
   }
 }
