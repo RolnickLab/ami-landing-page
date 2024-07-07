@@ -24,7 +24,7 @@
       {
         "image": "/data-management.png",
         "title": "Data management",
-        "description": "The Mila AMI Data Platform and its offline Data Companion utilize machine learning (ML) to automatically and efficiently organise large amounts of data. It is device-agnostic and can be used for images taken by any camera. It rapidly performs fine-grained species classification and new species discovery using the GBIF and Darwin Core Standards. Experts review the classifications and rectify them as needed, thereby improving the accuracy of the algorithms. The Mila AMI Data Platform and its Companion are open source and have been developed in collaboration with AMI Consortium Partners (see GitHub repository for list of contributors). Public contributions to improve its performance and/or to enrich its offerings are most welcome.",
+        "description": "The Mila AMI Data Platform and its offline Data Companion utilize machine learning (ML) to automatically and efficiently organise large amounts of data. It is device-agnostic and can be used for images taken by any camera. It rapidly performs fine-grained species classification and new species discovery using the GBIF and Darwin Core Standards. Experts review the classifications and rectify them as needed, thereby improving the accuracy of the algorithms. The Mila AMI Data Platform and its Companion are open source and have been developed in collaboration with AMI Consortium Partners (see <a href=\"https://github.com/RolnickLab/ami-platform\">GitHub repository</a> for list of contributors). Public contributions to improve its performance and/or to enrich its offerings are most welcome.",
         "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
       },
       {

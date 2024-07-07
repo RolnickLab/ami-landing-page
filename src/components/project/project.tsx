@@ -25,7 +25,10 @@ export const Project = ({
     />
     <div className={styles.content}>
       <h2 className="heading2">{data.title}</h2>
-      <p className="body">{data.description}</p>
+      <p
+        className="body"
+        dangerouslySetInnerHTML={{ __html: data.description }}
+      />
       <ExternalLinkButton label="Learn more" href={data.href} />
     </div>
   </div>
