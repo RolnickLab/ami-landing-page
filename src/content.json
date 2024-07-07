@@ -10,45 +10,55 @@
   },
   "partners": [
     {
+      "logo": "/partners/aarhus-university.png",
       "label": "Aarhus University",
-      "location": "Denmark"
+      "location": "Denmark",
+      "href": "https://international.au.dk/"
     },
     {
-      "logo": "/mila-logo.png",
+      "logo": "/partners/mila.png",
       "label": "Mila - Quebec Artificial Intelligence Institute",
       "location": "Canada",
       "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
     },
     {
-      "logo": "/space-logo.png",
+      "logo": "/partners/montreal-space-for-life.png",
       "label": "Montreal Space for Life - Insectarium",
       "location": "Canada",
       "href": "https://espacepourlavie.ca/en/news/how-ai-will-revolutionize-preservation-biodiversity"
     },
     {
+      "logo": "/partners/natural-resources-canada.svg",
       "label": "Natural Resources Canada",
-      "location": "Canada"
+      "location": "Canada",
+      "href": "https://natural-resources.canada.ca/"
     },
     {
+      "logo": "/partners/the-alan-turing-institute.png",
       "label": "The Alan Turing Institute",
-      "location": "United Kingdom"
+      "location": "United Kingdom",
+      "href": "https://www.turing.ac.uk/"
     },
     {
-      "logo": "/ukceh-logo.png",
+      "logo": "/partners/ukceh.png",
       "label": "UK Centre for Ecology & Hydrology",
       "location": "United Kingdom",
       "href": "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap"
     },
     {
+      "logo": "/partners/universite-de-sherbrooke.webp",
       "label": "Université de Sherbrooke",
-      "location": "Canada"
+      "location": "Canada",
+      "href": "https://www.usherbrooke.ca/"
     },
     {
+      "logo": "/partners/universite-laval.png",
       "label": "Université Laval",
-      "location": "Canada"
+      "location": "Canada",
+      "href": "https://www.ulaval.ca/"
     },
     {
-      "logo": "/vermont-logo.webp",
+      "logo": "/partners/vermont-center-for-ecostudies.webp",
       "label": "Vermont Center for Ecostudies",
       "location": "United States of America",
       "href": "https://vtecostudies.org/"

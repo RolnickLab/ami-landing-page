@@ -7,10 +7,12 @@
 }
 
 .logos {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
   justify-content: center;
   gap: 50px;
+  text-align: center;
 }
 
 .logo {
@@ -26,7 +28,12 @@
   }
 
   .logos {
-    flex-direction: column;
-    gap: 0;
+    gap: 20px;
+  }
+
+  .logo {
+    object-fit: contain;
+    height: 50px;
+    max-width: 100px;
   }
 }
