@@ -20,11 +20,14 @@ export const ListItem = ({
 }) => (
   <div className={styles.listItem}>
     <div className={styles.intro}>
-      <span className={classNames("bodyLarge", styles.title)}>{title}</span>
+      {href ? (
+        <ExternalLinkButton label={title} href={href} theme="text" />
+      ) : (
+        <span className={classNames("bodySmall", styles.title)}>{title}</span>
+      )}
       {label && <span className="bodyExtraSmall">{label}</span>}
     </div>
 
     {description && <span className="bodySmall">{description}</span>}
-    {href && <ExternalLinkButton label="Link" href={href} theme="ghost" />}
   </div>
 );

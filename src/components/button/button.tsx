@@ -22,18 +22,18 @@ export const ExternalLinkButton = ({
 }: {
   label: string;
   href: string;
-  theme?: "outline" | "ghost";
+  theme?: "outline" | "text";
 }) => (
   <a
     className={classNames("bodySmall", styles.button, {
       [styles.outline]: theme === "outline",
-      [styles.ghost]: theme === "ghost",
+      [styles.text]: theme === "text",
     })}
     href={href}
     target="_blank"
     rel="noopener noreferrer"
   >
-    {label}
-    <ExternalLinkIcon />
+    <span>{label}</span>
+    <ExternalLinkIcon className={styles.icon} />
   </a>
 );

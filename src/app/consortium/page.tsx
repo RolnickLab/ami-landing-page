@@ -14,7 +14,7 @@ export default function Page() {
       </Section>
       <Section>
         <h2 className="heading2">Consortium Core Partners</h2>
-        <Spacer size={20} />
+        <Spacer size={40} />
         <List>
           {content.partners.map((partner, index) => (
             <ListItem
@@ -27,7 +27,7 @@ export default function Page() {
         </List>
         <Spacer size={100} />
         <h2 className="heading2">Consortium Steering Committee</h2>
-        <Spacer size={20} />
+        <Spacer size={40} />
         <List>
           {content.committee.map((member, index) => (
             <ListItem
