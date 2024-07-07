@@ -43,7 +43,7 @@
   .content,
   .project.reverse .content {
     padding: 20px;
-    align-items: stretch;
+    align-items: flex-start;
     text-align: left;
   }
 }
