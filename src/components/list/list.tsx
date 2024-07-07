@@ -25,7 +25,11 @@ export const ListItem = ({
       ) : (
         <span className={classNames("bodySmall", styles.title)}>{title}</span>
       )}
-      {label && <span className="bodyExtraSmall">{label}</span>}
+      {label && (
+        <span className={classNames("bodyExtraSmall", styles.label)}>
+          {label}
+        </span>
+      )}
     </div>
 
     {description && <span className="bodySmall">{description}</span>}
