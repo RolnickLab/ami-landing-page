@@ -4,6 +4,7 @@ import { List, ListItem } from "@/components/list/list";
 import { Project } from "@/components/project/project";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
+import { Video } from "@/components/video/video";
 import content from "@/content.json";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -98,11 +99,7 @@ export default function Page() {
         <div className={styles.content}>
           <h1 className="heading1">{content.sections.media}</h1>
           {content.media.map(({ src, caption }, index) => (
-            <div key={index}>
-              <iframe src={src} width="670" height="372" allowFullScreen />
-              <Spacer size={10} />
-              <p className="body">{caption}</p>
-            </div>
+            <Video key={index} src={src} caption={caption} />
           ))}
         </div>
       </Section>
