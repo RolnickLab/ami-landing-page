@@ -1,27 +1,110 @@
-import { About } from "@/app/components/about/about";
-import { Intro } from "@/app/components/intro/intro";
+/* eslint-disable @next/next/no-img-element */
+import { Intro } from "@/components/intro/intro";
+import { List, ListItem } from "@/components/list/list";
+import { Project } from "@/components/project/project";
 import { Section } from "@/components/section/section";
-import { Media } from "./components/media/media";
-import { Projects } from "./components/projects/projects";
-import { Publications } from "./components/publications/publications";
+import { Spacer } from "@/components/spacer/spacer";
+import content from "@/content.json";
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <>
-      <Section tinted>
-        <Intro />
+      <Section theme="moth">
+        <Intro title={content.title} subTitle={content.subTitle} />
       </Section>
+
+      <Section theme="tinted">
+        <p className="body" style={{ textAlign: "center" }}>
+          {content.sections.partners}
+        </p>
+        <Spacer size={50} />
+        <div className={styles.logos}>
+          {content.partners
+            .filter((partner) => partner.logo && partner.href)
+            .map((partner, index) => (
+              <Link key={index} href={partner.href as string}>
+                <img
+                  alt={partner.label}
+                  src={partner.logo}
+                  className={styles.logo}
+                />
+              </Link>
+            ))}
+        </div>
+      </Section>
+
       <Section>
-        <About />
+        <div className={styles.content}>
+          {content.about.map((section, index) => (
+            <div key={index}>
+              <h2 className="heading2">{section.title}</h2>
+              <Spacer size={20} />
+              <p
+                className="body"
+                dangerouslySetInnerHTML={{ __html: section.text }}
+              />
+            </div>
+          ))}
+        </div>
       </Section>
-      <Section tinted>
-        <Projects />
+
+      <Section theme="tinted">
+        <div className={styles.content}>
+          <div>
+            <h1 className="heading1">{content.sections.projects}</h1>
+            <Spacer size={20} />
+            <p
+              className="bodyLarge"
+              dangerouslySetInnerHTML={{ __html: content.projects.description }}
+            />
+          </div>
+          {content.projects.list.map((project, index) => (
+            <Project key={index} data={project} reverse={index % 2 !== 0} />
+          ))}
+        </div>
       </Section>
+
       <Section>
-        <Publications />
+        <h1 className="heading1">{content.sections.resources}</h1>
+        <Spacer size={20} />
+        <List>
+          {content.resources.map((resource, index) => (
+            <ListItem
+              key={index}
+              title={resource.title}
+              description={resource.description}
+              href={resource.href}
+            />
+          ))}
+        </List>
+        <Spacer size={100} />
+        <h2 className="heading2">{content.sections.publications}</h2>
+        <Spacer size={20} />
+        <List>
+          {content.publications.map((publication, index) => (
+            <ListItem
+              key={index}
+              title={publication.title}
+              description={publication.description}
+              href={publication.href}
+            />
+          ))}
+        </List>
       </Section>
-      <Section tinted>
-        <Media />
+
+      <Section theme="tinted">
+        <div className={styles.content}>
+          <h1 className="heading1">{content.sections.media}</h1>
+          {content.media.map(({ src, caption }, index) => (
+            <div key={index}>
+              <iframe src={src} width="670" height="372" allowFullScreen />
+              <Spacer size={10} />
+              <p className="body">{caption}</p>
+            </div>
+          ))}
+        </div>
       </Section>
     </>
   );

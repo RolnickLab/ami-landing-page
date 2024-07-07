@@ -9,7 +9,6 @@
   width: 100%;
   height: 0;
   padding-bottom: 75%;
-  border-radius: 10px;
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border);
@@ -30,20 +29,15 @@
   align-items: flex-end;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .project {
     display: flex;
     flex-direction: column;
     gap: 0;
     margin: 0;
     background: var(--background);
-    border-radius: 10px;
     border: 1px solid var(--border);
     overflow: hidden;
-  }
-
-  .image {
-    border-radius: 0;
   }
 
   .content,

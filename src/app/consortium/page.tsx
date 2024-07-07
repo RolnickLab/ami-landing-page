@@ -1,52 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
+import { List, ListItem } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
-import { data } from "@/data";
-import styles from "./page.module.css";
+import content from "@/content.json";
 
 export default function Page() {
   return (
     <>
-      <Section tinted>
-        <div className={styles.intro}>
-          <h1 className="heading1">The AMI Consortium</h1>
-          <p className="bodyLarge">
-            Our mission is to establish standardized and scalable automated
-            monitoring systems for insect data to advance ecological
-            understanding and conservation efforts globally through
-            international and interdisciplinary collaboration.
-          </p>
-        </div>
+      <Section theme="tinted">
+        <h1 className="heading1">{content.consortium.title}</h1>
+        <Spacer size={20} />
+        <p className="bodyLarge">{content.consortium.description}</p>
       </Section>
       <Section>
-        <div className={styles.content}>
-          <h2 className="heading2">Consortium Core Partners</h2>
-          <Spacer size={20} />
-          <div className={styles.list}>
-            {data.partners.map((partner, index) => (
-              <div key={index} className={styles.listItem}>
-                <span className="bodyLarge">{partner.label}</span>
-                <span className="bodyExtraSmall">{partner.location}</span>
-                {partner.href && (
-                  <span className="body">
-                    <a href={partner.href}>Website</a>
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-          <Spacer size={100} />
-          <h2 className="heading2">Consortium Steering Committee</h2>
-          <Spacer size={20} />
-          <div className={styles.list}>
-            {data.committee.map((member, index) => (
-              <div key={index} className={styles.listItem}>
-                <span className="body">{member.name}</span>
-                <span className="bodyExtraSmall">{member.affiliation}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <h2 className="heading2">Consortium Core Partners</h2>
+        <Spacer size={20} />
+        <List>
+          {content.partners.map((partner, index) => (
+            <ListItem
+              key={index}
+              title={partner.label}
+              label={partner.location}
+              href={partner.href}
+            />
+          ))}
+        </List>
+        <Spacer size={100} />
+        <h2 className="heading2">Consortium Steering Committee</h2>
+        <Spacer size={20} />
+        <List>
+          {content.committee.map((member, index) => (
+            <ListItem
+              key={index}
+              title={member.name}
+              label={member.affiliation}
+            />
+          ))}
+        </List>
       </Section>
     </>
   );

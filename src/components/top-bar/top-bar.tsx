@@ -24,7 +24,7 @@ export const TopBar = () => {
           <Link
             href={menuItem.href}
             key={index}
-            className={classNames("label", styles.menuItem, {
+            className={classNames("bodySmall", styles.menuItem, {
               [styles.active]: currentPath === menuItem.href,
             })}
           >

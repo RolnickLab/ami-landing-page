@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ButtonLink } from "../button/button";
+import { ExternalLinkButton } from "../button/button";
 import styles from "./project.module.css";
 
 export const Project = ({
@@ -22,7 +22,7 @@ export const Project = ({
     <div className={styles.content}>
       <h2 className="heading2">{data.title}</h2>
       <p className="body">{data.text}</p>
-      <ButtonLink label="Learn more" href={data.href} />
+      <ExternalLinkButton label="Learn more" href={data.href} />
     </div>
   </div>
 );

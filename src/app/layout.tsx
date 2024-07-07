@@ -6,8 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AMI",
-  description: "Platform for long-term automated monitoring of insects",
+  title: "Automated Monitoring of Insects (AMI)",
+  description:
+    "Timestamped, Geolocated, and Labelled Observational Insect Data",
 };
 
 export default function RootLayout({

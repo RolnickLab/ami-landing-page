@@ -4,14 +4,15 @@ import styles from "./section.module.css";
 
 export const Section = ({
   children,
-  tinted,
+  theme,
 }: {
   children: ReactNode;
-  tinted?: boolean;
+  theme?: "tinted" | "moth";
 }) => (
   <div
     className={classNames(styles.section, {
-      [styles.tinted]: tinted,
+      [styles.tinted]: theme === "tinted",
+      [styles.moth]: theme === "moth",
     })}
   >
     <div className={styles.content}>{children}</div>

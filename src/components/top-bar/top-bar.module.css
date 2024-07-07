@@ -14,6 +14,8 @@
 }
 
 .menuItem {
+  color: var(--text);
+  font-weight: 500;
   position: relative;
 }
 
@@ -21,27 +23,31 @@
   opacity: 1;
 }
 
-.menuItem:hover .line {
-  display: block;
-}
-
-.menuItem.active {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.menuItem.active .line {
-  display: block;
-  background-color: var(--text-link);
-}
-
 .line {
-  display: none;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
   bottom: -10px;
-  width: 40px;
+  width: 0px;
   height: 2px;
-  background-color: var(--text);
+  background-color: var(--text-link);
+  transition: width 200ms ease-in-out;
+}
+
+.menuItem:hover .line {
+  width: 40px;
+}
+
+.menuItem.active .line {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .topBar {
+    padding: 0 20px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
 }

@@ -2,10 +2,8 @@
   /* Colors */
   --background: #ffffff;
   --background-tinted: #f4f8fe80;
-  --background-button: #5f8ac6;
   --text: #222426;
   --text-low-contrast: #6f7172;
-  --text-button: #ffffff;
   --text-link: #5f8ac6;
   --border: #f0f0f0;
 }
@@ -19,6 +17,7 @@
 html,
 body {
   max-width: 100vw;
+  white-space: pre-wrap;
   overflow-x: hidden;
 }
 
@@ -38,21 +37,21 @@ a:hover {
 /* Text styles */
 .heading1 {
   font-size: 40px;
-  line-height: 48px;
+  line-height: 1.3em;
   font-weight: 600;
   margin: 0;
 }
 
 .heading2 {
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1.3em;
   font-weight: 600;
   margin: 0;
 }
 
 .bodyExtraSmall {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.3em;
   font-weight: 400;
   margin: 0;
   color: var(--text-low-contrast);
@@ -60,7 +59,7 @@ a:hover {
 
 .bodySmall {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   color: var(--text-low-contrast);
@@ -68,56 +67,35 @@ a:hover {
 
 .body {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   color: var(--text-low-contrast);
+}
+
+.body a {
+  color: var(--text-link);
+  font-weight: 500;
 }
 
 .bodyLarge {
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   color: var(--text-low-contrast);
 }
 
-.bodyExtraLarge {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 400;
-  margin: 0;
-  color: var(--text-low-contrast);
-}
-
-.label {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 500;
-  margin: 0;
-  color: var(--text-low-contrast);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .heading1 {
     font-size: 24px;
-    line-height: 32px;
   }
 
   .heading2 {
     font-size: 20px;
-    line-height: 28px;
   }
 
   .bodyLarge {
     font-size: 16px;
-    line-height: 24px;
-  }
-
-  .bodyExtraLarge {
-    font-size: 20px;
-    line-height: 28px;
   }
 }
