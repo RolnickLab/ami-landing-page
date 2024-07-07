@@ -33,7 +33,7 @@ export const Video = ({ caption, src }: { caption: string; src: string }) => {
         />
       </div>
       <Spacer size={10} />
-      <p className="body">{caption}</p>
+      <p className="bodySmall">{caption}</p>
     </div>
   );
 };

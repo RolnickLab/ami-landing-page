@@ -25,7 +25,15 @@ export default function Page() {
             />
           ))}
         </List>
-        <Spacer size={100} />
+      </Section>
+      <Section theme="tinted">
+        <img src="/ami-people.jpg" alt="" width="100%" />
+        <Spacer size={10} />
+        <p className="bodySmall">
+          April 2024, Gathering hosted by Aarhus University
+        </p>
+      </Section>
+      <Section>
         <h2 className="heading2">Consortium Steering Committee</h2>
         <Spacer size={40} />
         <List>
