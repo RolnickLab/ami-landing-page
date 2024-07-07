@@ -10,7 +10,7 @@ export const Project = ({
   data: {
     image: string;
     title: string;
-    text: string;
+    description: string;
     href: string;
   };
   reverse?: boolean;
@@ -25,7 +25,7 @@ export const Project = ({
     />
     <div className={styles.content}>
       <h2 className="heading2">{data.title}</h2>
-      <p className="body">{data.text}</p>
+      <p className="body">{data.description}</p>
       <ExternalLinkButton label="Learn more" href={data.href} />
     </div>
   </div>

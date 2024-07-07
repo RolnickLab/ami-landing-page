@@ -18,11 +18,11 @@ export default function Page() {
 
       <Section theme="tinted">
         <p className="body" style={{ textAlign: "center" }}>
-          {content.sections.partners}
+          {content.consortium.partners.titleShort}
         </p>
         <Spacer size={50} />
         <div className={styles.logos}>
-          {content.partners.map((partner, index) => (
+          {content.consortium.partners.list.map((partner, index) => (
             <Link key={index} href={partner.href as string}>
               <Image
                 src={partner.logo}
@@ -44,7 +44,7 @@ export default function Page() {
               <Spacer size={20} />
               <p
                 className="body"
-                dangerouslySetInnerHTML={{ __html: section.text }}
+                dangerouslySetInnerHTML={{ __html: section.description }}
               />
             </div>
           ))}
@@ -54,7 +54,7 @@ export default function Page() {
       <Section theme="tinted">
         <div className={styles.content}>
           <div>
-            <h1 className="heading1">{content.sections.projects}</h1>
+            <h1 className="heading1">{content.projects.title}</h1>
             <Spacer size={20} />
             <p
               className="bodyLarge"
@@ -68,10 +68,10 @@ export default function Page() {
       </Section>
 
       <Section>
-        <h1 className="heading1">{content.sections.resources}</h1>
+        <h1 className="heading1">{content.resources.title}</h1>
         <Spacer size={20} />
         <List>
-          {content.resources.map((resource, index) => (
+          {content.resources.list.map((resource, index) => (
             <ListItem
               key={index}
               title={resource.title}
@@ -81,10 +81,10 @@ export default function Page() {
           ))}
         </List>
         <Spacer size={100} />
-        <h2 className="heading2">{content.sections.publications}</h2>
+        <h2 className="heading2">{content.publications.title}</h2>
         <Spacer size={20} />
         <List>
-          {content.publications.map((publication, index) => (
+          {content.publications.list.map((publication, index) => (
             <ListItem
               key={index}
               title={publication.title}
@@ -97,8 +97,8 @@ export default function Page() {
 
       <Section theme="tinted">
         <div className={styles.content}>
-          <h1 className="heading1">{content.sections.media}</h1>
-          {content.media.map(({ src, caption }, index) => (
+          <h1 className="heading1">{content.media.title}</h1>
+          {content.media.list.map(({ src, caption }, index) => (
             <Video key={index} src={src} caption={caption} />
           ))}
         </div>

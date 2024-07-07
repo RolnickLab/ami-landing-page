@@ -13,10 +13,10 @@ export default function Page() {
         <p className="bodyLarge">{content.consortium.description}</p>
       </Section>
       <Section>
-        <h2 className="heading2">Consortium Core Partners</h2>
+        <h2 className="heading2">{content.consortium.partners.title}</h2>
         <Spacer size={40} />
         <List>
-          {content.partners.map((partner, index) => (
+          {content.consortium.partners.list.map((partner, index) => (
             <ListItem
               key={index}
               title={partner.label}
@@ -28,22 +28,20 @@ export default function Page() {
       </Section>
       <Section theme="tinted">
         <Image
-          src="/people.jpg"
+          src={content.consortium.people.image}
           alt=""
           width={1999}
           height={1500}
           style={{ width: "100%", height: "auto" }}
         />
         <Spacer size={10} />
-        <p className="bodySmall">
-          April 2024, Gathering hosted by Aarhus University
-        </p>
+        <p className="bodySmall">{content.consortium.people.caption}</p>
       </Section>
       <Section>
-        <h2 className="heading2">Consortium Steering Committee</h2>
+        <h2 className="heading2">{content.consortium.committee.title}</h2>
         <Spacer size={40} />
         <List>
-          {content.committee.map((member, index) => (
+          {content.consortium.committee.list.map((member, index) => (
             <ListItem
               key={index}
               title={member.name}
