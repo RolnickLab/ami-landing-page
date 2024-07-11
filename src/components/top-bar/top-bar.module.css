@@ -1,10 +1,14 @@
 .topBar {
+  position: sticky;
+  top: 0;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
   padding: 0 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
 }
 
 .menu {
