@@ -25,6 +25,7 @@ export const Video = ({ caption, src }: { caption: string; src: string }) => {
         style={{ width: `${videoWidth}px`, height: `${videoWidth / RATIO}px` }}
       >
         <iframe
+          loading="lazy"
           width={videoWidth}
           height={videoWidth / RATIO}
           src={src}
