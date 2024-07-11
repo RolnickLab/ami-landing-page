@@ -16,7 +16,7 @@
 
 .moth {
   background-color: var(--background-tinted);
-  background-image: url("https://mila.quebec/sites/default/files/styles/focal_crop_2500_757/public/blocks/imagefullwidth/3258/dividerami.jpg?h=b21ef8df&itok=Qw7WZYOx");
+  background-image: url("/moths.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
