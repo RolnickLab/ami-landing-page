@@ -27,4 +27,6 @@ All text content is specified in the file `src/content.json`. To edit any conten
 
 ## Deployment
 
-To be added.
+A public preview version of the web app is temporarily deployed on [https://ami-landing-page-3ofwd.ondigitalocean.app](https://ami-landing-page-3ofwd.ondigitalocean.app). The preview version is automatically updated when a change is pushed to branch `main`.
+
+Talk to [@annavik](https://github.com/annavik) if you need access to the deployment environment. When it's time to go live, we will use a proper domain and probably also a different hosting provider.
