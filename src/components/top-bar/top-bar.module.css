@@ -1,16 +1,19 @@
 .topBar {
+  height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
+  justify-content: flex-start;
+  gap: 40px;
   padding: 0 40px;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-grow: 1;
   gap: 40px;
+  white-space: nowrap;
 }
 
 .menuItem {
@@ -21,6 +24,14 @@
 
 .menuItem:hover {
   opacity: 1;
+}
+
+.label {
+  display: inline;
+}
+
+.labelShort {
+  display: none;
 }
 
 .line {
@@ -35,7 +46,7 @@
 }
 
 .menuItem:hover .line {
-  width: 40px;
+  width: 20px;
 }
 
 .menuItem.active .line {
@@ -44,10 +55,19 @@
 
 @media (max-width: 720px) {
   .topBar {
+    gap: 20px;
     padding: 0 20px;
   }
 
   .menu {
     gap: 20px;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .labelShort {
+    display: inline;
   }
 }

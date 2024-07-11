@@ -4,11 +4,16 @@ import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
+import { LinkButton } from "../button/button";
 import styles from "./top-bar.module.css";
 
 const MENU_ITEMS = [
-  { label: "The AMI Consortium", href: "/consortium" },
-  { label: "Contact Us", href: "mailto:moth-ai@mila.quebec" },
+  { label: "Home", labelShort: "Home", href: "/" },
+  {
+    label: "The AMI Consortium",
+    labelShort: "Consortium",
+    href: "/consortium",
+  },
 ];
 
 export const TopBar = () => {
@@ -28,11 +33,13 @@ export const TopBar = () => {
               [styles.active]: currentPath === menuItem.href,
             })}
           >
-            {menuItem.label}
+            <span className={styles.label}>{menuItem.label}</span>
+            <span className={styles.labelShort}>{menuItem.labelShort}</span>
             <span className={styles.line} />
           </Link>
         ))}
       </nav>
+      <LinkButton href="mailto:moth-ai@mila.quebec" label="Contact Us" />
     </header>
   );
 };
