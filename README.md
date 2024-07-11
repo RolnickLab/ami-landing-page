@@ -23,7 +23,7 @@ The app will now be available in a browser on [http://localhost:3000](http://loc
 
 ## Edit content
 
-All text content is specified in the file `src/content.json`. To edit any content, simply update this file. Public assets are hosted from folder `/public`.
+All text content is specified in the file `/src/content.json`. To edit any content, simply update this file. Public assets are hosted from folder `/public`.
 
 ## Deployment
 
