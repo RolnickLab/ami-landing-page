@@ -29,8 +29,8 @@
       },
       {
         "image": "/analytical-toolbox.png",
-        "title": "Data Sensemaking",
-        "description": "The AMI Consortium strives to foster partnerships and knowledge-sharing to maximize the impact of insect monitoring efforts.The AMI Data Platform will continue to evolve as a medium to facilitate interdisciplinary collaboration and sharing. AMI partners are developing tools and guidelines to boost analytical quality and actionable insights. Already, machine learning models can be reviewed and co-developed with ecologists through the Platform’s GitHub repository; entomologists can provide quality assurance for machine-generated classifications; ecologists can publish programming libraries and best practices for the rigorous and streamlined analysis of AMI datasets. We hope that AMI users will contribute their own specialised aids to the Community toolbox to accelerate our collective efforts towards biodiversity understanding and conservation.",
+        "title": "Ecological Knowledge",
+        "description": "The AMI Consortium strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring efforts. The AMI Data Platform will continue to evolve as a medium to facilitate interdisciplinary collaboration and sharing. AMI partners are developing tools and guidelines to boost analytical quality and actionable insights. Already, machine learning models can be reviewed and co-developed with ecologists through the Platform’s GitHub repository; entomologists can provide quality assurance for machine-generated classifications; ecologists can publish programming libraries and best practices for the rigorous and streamlined analysis of AMI datasets. We hope that AMI users will contribute their own specialised aids to the Community toolbox to accelerate our collective efforts towards biodiversity understanding and conservation.",
         "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
       }
     ]
