@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
+import { BulletList } from "../bullet-list/bullet-list";
 import { ExternalLinkButton } from "../button/button";
 import styles from "./project.module.css";
 
@@ -11,6 +12,7 @@ export const Project = ({
     image: string;
     title: string;
     description: string;
+    listItems?: string[];
     href: string;
   };
   reverse?: boolean;
@@ -29,6 +31,9 @@ export const Project = ({
         className="body"
         dangerouslySetInnerHTML={{ __html: data.description }}
       />
+      {data.listItems?.length ? (
+        <BulletList items={data.listItems} reverse={reverse} />
+      ) : null}
       <ExternalLinkButton label="Learn more" href={data.href} />
     </div>
   </div>

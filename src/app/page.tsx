@@ -62,7 +62,7 @@ export default function Page() {
             />
           </div>
           {content.projects.list.map((project, index) => (
-            <Project key={index} data={project} reverse={index % 2 !== 0} />
+            <Project key={index} data={project} reverse={index % 2 === 0} />
           ))}
         </div>
       </Section>

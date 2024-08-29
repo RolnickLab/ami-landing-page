@@ -1,0 +1,26 @@
+.bulletList {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.bulletListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.bulletListItem.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-link);
+}

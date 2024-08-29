@@ -24,7 +24,15 @@
       {
         "image": "/data-management.png",
         "title": "Data Management",
-        "description": "The AMI Data Platform is a hub for labelled insect data at wide spatial, temporal and taxonomic scales. Mila researchers as well as AMI partners have developed machine learning (ML) algorithms to automatically and efficiently organise its large amounts of data. For those looking to label insect images, contribute ecological knowledge, and/or access insect data, the Platform offers a full range of services: automated detection of insects in images, fine-grained taxonomic classification, expert validation of classifications, new species discovery using the GBIF and Darwin Core Standards, curation of datasets across species and locations, data exploration and download for analysis.",
+        "description": "The AMI Data Platform is a hub for labelled insect data at wide spatial, temporal and taxonomic scales. Mila researchers as well as AMI partners have developed machine learning (ML) algorithms to automatically and efficiently organise its large amounts of data. For those looking to label insect images, contribute ecological knowledge, and/or access insect data, the Platform offers a full range of services:",
+        "listItems": [
+          "automated detection of insects in images",
+          "fine-grained taxonomic classification",
+          "expert validation of classifications",
+          "new species discovery using the GBIF and Darwin Core Standards",
+          "curation of datasets across species and locations",
+          "data exploration and download for analysis"
+        ],
         "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
       },
       {

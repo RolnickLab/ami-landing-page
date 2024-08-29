@@ -34,6 +34,6 @@ export const ExternalLinkButton = ({
     rel="noopener noreferrer"
   >
     <span>{label}</span>
-    <ExternalLinkIcon className={styles.icon} />
+    <ExternalLinkIcon />
   </a>
 );
