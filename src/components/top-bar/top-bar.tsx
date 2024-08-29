@@ -7,6 +7,9 @@ import { AMILogo } from "../ami-logo/ami-logo";
 import { LinkButton } from "../button/button";
 import styles from "./top-bar.module.css";
 
+const CONTACT_MAIL =
+  "ami-steering-committe-aaaam3iesbkxe22x3nkrr4c7gm@automatedinse-zlx9399.slack.com";
+
 const MENU_ITEMS = [
   { label: "Home", labelShort: "Home", href: "/" },
   {
@@ -39,7 +42,7 @@ export const TopBar = () => {
           </Link>
         ))}
       </nav>
-      <LinkButton href="mailto:moth-ai@mila.quebec" label="Contact Us" />
+      <LinkButton href={`mailto:${CONTACT_MAIL}`} label="Contact Us" />
     </header>
   );
 };
