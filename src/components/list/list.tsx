@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import { ReactNode } from "react";
 import { ExternalLinkButton } from "../button/button";
@@ -21,7 +22,10 @@ export const ListItem = ({
   <div className={styles.listItem}>
     <div className={styles.intro}>
       {href ? (
-        <ExternalLinkButton label={title} href={href} theme="text" />
+        <ExternalLinkButton href={href} theme="text">
+          <span>{title}</span>
+          <ExternalLinkIcon />
+        </ExternalLinkButton>
       ) : (
         <span className={classNames("bodySmall", styles.title)}>{title}</span>
       )}

@@ -1,28 +1,41 @@
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Link from "next/link";
+import { CSSProperties, ReactNode } from "react";
 import styles from "./button.module.css";
 
 export const LinkButton = ({
-  label,
+  children,
   href,
+  theme = "outline",
+  style,
 }: {
-  label: string;
+  children: ReactNode;
   href: string;
+  theme?: "outline" | "text";
+  style?: CSSProperties;
 }) => (
-  <Link className={classNames("bodySmall", styles.button)} href={href}>
-    {label}
+  <Link
+    className={classNames("bodySmall", styles.button, {
+      [styles.outline]: theme === "outline",
+      [styles.text]: theme === "text",
+    })}
+    href={href}
+    style={style}
+  >
+    {children}
   </Link>
 );
 
 export const ExternalLinkButton = ({
-  label,
+  children,
   href,
   theme = "outline",
+  style,
 }: {
-  label: string;
+  children: ReactNode;
   href: string;
   theme?: "outline" | "text";
+  style?: CSSProperties;
 }) => (
   <a
     className={classNames("bodySmall", styles.button, {
@@ -30,10 +43,10 @@ export const ExternalLinkButton = ({
       [styles.text]: theme === "text",
     })}
     href={href}
-    target="_blank"
     rel="noopener noreferrer"
+    style={style}
+    target="_blank"
   >
-    <span>{label}</span>
-    <ExternalLinkIcon />
+    {children}
   </a>
 );

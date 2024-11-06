@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import { BulletList } from "../bullet-list/bullet-list";
@@ -26,15 +27,20 @@ export const Project = ({
       className={styles.image}
     />
     <div className={styles.content}>
-      <h2 className="heading2">{data.title}</h2>
+      <h2 className="heading2">
+        <span className="block">{data.title}</span>
+      </h2>
       <p
-        className="body"
+        className="bodySmall"
         dangerouslySetInnerHTML={{ __html: data.description }}
       />
       {data.listItems?.length ? (
         <BulletList items={data.listItems} reverse={reverse} />
       ) : null}
-      <ExternalLinkButton label="Learn more" href={data.href} />
+      <ExternalLinkButton href={data.href}>
+        <span>Learn more</span>
+        <ExternalLinkIcon />
+      </ExternalLinkButton>
     </div>
   </div>
 );

@@ -18,7 +18,9 @@ export default function Page() {
 
       <Section theme="tinted">
         <p className="body" style={{ textAlign: "center" }}>
-          {content.consortium.partners.titleShort}
+          <span className="block">
+            {content.consortium.partners.titleShort}
+          </span>
         </p>
         <Spacer size={50} />
         <div className={styles.logos}>
