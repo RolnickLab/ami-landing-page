@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
 import { LinkButton } from "../button/button";
 import styles from "./top-bar.module.css";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 const CONTACT_MAIL =
   "ami-steering-committe-aaaam3iesbkxe22x3nkrr4c7gm@automatedinse-zlx9399.slack.com";
@@ -42,7 +43,14 @@ export const TopBar = () => {
           </Link>
         ))}
       </nav>
-      <LinkButton href={`mailto:${CONTACT_MAIL}`} label="Contact Us" />
+      <LinkButton
+        href={`mailto:${CONTACT_MAIL}`}
+        style={{ color: "var(--text)" }}
+        theme="text"
+      >
+        <EnvelopeClosedIcon />
+        <span>Contact Us</span>
+      </LinkButton>
     </header>
   );
 };

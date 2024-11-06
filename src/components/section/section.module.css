@@ -16,7 +16,7 @@
 
 .moth {
   background-color: var(--background-tinted);
-  background-image: url("/moths.jpg");
+  background-image: url("/moth.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

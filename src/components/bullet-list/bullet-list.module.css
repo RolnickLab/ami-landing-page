@@ -22,5 +22,5 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--text-link);
+  color: var(--primary);
 }

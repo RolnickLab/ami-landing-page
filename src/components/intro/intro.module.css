@@ -3,10 +3,6 @@
   margin: 0 -100px;
 }
 
-.introText {
-  line-height: 1.5em;
-}
-
 .introTextBlock {
   background: var(--background);
   padding: 5px 10px;

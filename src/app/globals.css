@@ -4,7 +4,8 @@
   --background-tinted: #f4f8fe80;
   --text: #222426;
   --text-low-contrast: #6f7172;
-  --text-link: #5f8ac6;
+  --primary: #5f8ac6;
+  --primary-text: #ffffff;
   --border: #f0f0f0;
 }
 
@@ -73,7 +74,7 @@ a:hover {
 }
 
 .body a {
-  color: var(--text-link);
+  color: var(--primary);
   font-weight: 500;
 }
 
@@ -83,6 +84,14 @@ a:hover {
   font-weight: 400;
   margin: 0;
   color: var(--text-low-contrast);
+}
+
+.block {
+  padding: 5px 10px;
+  background: var(--primary);
+  color: var(--primary-text);
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 @media (max-width: 720px) {
