@@ -33,13 +33,10 @@ export const Intro = ({
 
   return (
     <div className={styles.intro}>
-      <animated.h1
-        className={classNames("heading1", styles.introText)}
-        style={titleSprings}
-      >
+      <animated.h1 className={"heading1"} style={titleSprings}>
         <span className={styles.introTextBlock}>{title}</span>
       </animated.h1>
-      <Spacer size={10} />
+      <Spacer size={20} />
       <animated.h2
         className={classNames("bodyLarge", styles.introText)}
         style={subTitleSprings}
