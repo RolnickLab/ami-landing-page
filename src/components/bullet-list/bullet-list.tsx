@@ -13,7 +13,7 @@ export const BulletList = ({
     {items.map((item, index) => (
       <li
         key={index}
-        className={classNames("body", styles.bulletListItem, {
+        className={classNames("bodySmall", styles.bulletListItem, {
           [styles.reverse]: reverse,
         })}
       >

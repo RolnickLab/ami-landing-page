@@ -90,7 +90,7 @@ a:hover {
   padding: 5px 10px;
   background: var(--primary);
   color: var(--primary-text);
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
