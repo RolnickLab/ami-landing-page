@@ -1,15 +1,16 @@
+import { LinkButton } from "@/components/button/button";
 import { Intro } from "@/components/intro/intro";
 import { List, ListItem, ListItemContent } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
 import content from "@/content.json";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import styles from "./page.module.css";
-import { LinkButton } from "@/components/button/button";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
   return (
@@ -29,8 +30,8 @@ export default function Page() {
         </p>
         <Spacer size={50} />
         <div className={styles.logos}>
-          {content.consortium.partners.list.map((partner, index) => (
-            <Link key={index} href={partner.href as string}>
+          {content.consortium.partners.list.map((partner) => (
+            <Link key={partner.id} href={partner.href as string}>
               <Image
                 src={partner.logo}
                 alt={partner.label}
@@ -50,16 +51,12 @@ export default function Page() {
               <h2 className="heading2">{section.title}</h2>
               <Spacer size={20} />
               {section.description.map((__html, index) => (
-                <>
-                  <p
-                    key={index}
-                    className="body"
-                    dangerouslySetInnerHTML={{ __html }}
-                  />
+                <Fragment key={index}>
+                  <p className="body" dangerouslySetInnerHTML={{ __html }} />
                   {index < section.description.length - 1 && (
                     <Spacer size={20} />
                   )}
-                </>
+                </Fragment>
               ))}
             </div>
           ))}

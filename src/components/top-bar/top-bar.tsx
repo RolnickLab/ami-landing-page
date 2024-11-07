@@ -1,12 +1,12 @@
 "use client";
 
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
 import { LinkButton } from "../button/button";
 import styles from "./top-bar.module.css";
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 const CONTACT_MAIL =
   "ami-steering-committe-aaaam3iesbkxe22x3nkrr4c7gm@automatedinse-zlx9399.slack.com";
@@ -36,8 +36,8 @@ export const TopBar = () => {
       <nav className={styles.menu}>
         {MENU_ITEMS.map((menuItem, index) => (
           <Link
-            href={menuItem.href}
             key={index}
+            href={menuItem.href}
             className={classNames("bodySmall", styles.menuItem, {
               [styles.active]: currentPath === menuItem.href,
             })}
