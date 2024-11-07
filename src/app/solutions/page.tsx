@@ -17,6 +17,18 @@ export default function Page() {
           project.categories.includes(category)
         );
 
+  const sortedProjects = projects.sort(function (a, b) {
+    const titleA = a.title ?? "";
+    const titleB = b.title ?? "";
+    if (titleA < titleB) {
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+    return 0;
+  });
+
   return (
     <>
       <Section theme="tinted">
@@ -33,7 +45,7 @@ export default function Page() {
       </Section>
       <Section>
         <List>
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <ListItem key={project.title}>
               <Project data={project} />
             </ListItem>
