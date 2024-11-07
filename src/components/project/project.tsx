@@ -39,7 +39,7 @@ export const Project = ({
                 >
                   {partner?.label}
                 </a>
-                {data.partners.length - 1 > index && ", "}
+                {data.partners.length - 1 > index && " / "}
               </span>
             );
           })}

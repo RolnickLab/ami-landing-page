@@ -2,6 +2,7 @@
   "title": "Automated Monitoring of Insects",
   "subTitle": "Empowering local communities to protect and conserve biodiversity",
   "categories": [
+    { "id": "all", "label": "All categories" },
     { "id": "software", "label": "Software" },
     { "id": "hardware", "label": "Hardware" },
     { "id": "analysis", "label": "Data sampling and analysis" },
@@ -92,13 +93,14 @@
         "categories": ["analysis"]
       },
       {
-        "partners": ["turing"],
+        "partners": ["turing", "ukceh"],
         "title": "AMBER",
         "description": [
+          "The AMBER project, funded by the Abrdn Charitable Foundation, will develop and trial AMI technology for monitoring nocturnal insects, with a focus on tropical deployments. The project will combine expertise from UKCEH, the Alan Turing institute, and a range of local partners, to push the current generation of AMI hardware to their limits.",
           "The Alan Turing Institute contributes to the AMBER project by developing and implementing machine learning models for AMI systems. With an emphasis on edge-based processing, these models are optimised to run directly on Raspberry Pi devices, enabling data analysis and species identification to take place entirely in the field. This approach significantly reduces the need for large-scale data transfer and reliance on researchers manually collecting data in person."
         ],
         "href": "https://www.turing.ac.uk/research/research-projects/amber",
-        "categories": ["software"]
+        "categories": ["software", "analysis"]
       },
       {
         "partners": ["ukceh"],
@@ -108,15 +110,6 @@
         ],
         "href": "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap",
         "categories": ["hardware"]
-      },
-      {
-        "partners": ["ukceh"],
-        "title": "AMBER",
-        "description": [
-          "The AMBER project, funded by the Abrdn Charitable Foundation, will develop and trial AMI technology for monitoring nocturnal insects, with a focus on tropical deployments.. The project will combine expertise from UKCEH, the Alan Turing institute, and a range of local partners, to push the current generation of AMI hardware to their limits."
-        ],
-        "href": "https://www.turing.ac.uk/research/research-projects/amber",
-        "categories": ["analysis"]
       },
       {
         "partners": ["ukceh"],

@@ -38,6 +38,10 @@ p a {
   font-weight: 500;
 }
 
+button {
+  all: unset;
+}
+
 /* Text styles */
 .heading1 {
   font-size: 40px;
