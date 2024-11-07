@@ -68,7 +68,7 @@
         "categories": ["analysis"]
       },
       {
-        "partners": ["mila"],
+        "partners": ["mila", "espacepourlavie"],
         "title": "Antenna",
         "description": [
           "The Antenna Data Platform is an interdisciplinary hub for labelled insect data at wide spatial, temporal and taxonomic scales.",
