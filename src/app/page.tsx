@@ -63,6 +63,17 @@ export default function Page() {
               ))}
             </div>
           ))}
+          <div>
+            <Image
+              src="/moths.jpg"
+              alt=""
+              width={1000}
+              height={667}
+              style={{ width: "100%", height: "auto" }}
+            />
+            <Spacer size={10} />
+            <p className="bodySmall">Photo by Michael Bunsen</p>
+          </div>
         </div>
       </Section>
 
@@ -85,7 +96,7 @@ export default function Page() {
       </Section>
 
       <Section>
-        <h1 className="heading1">{content.resources.title}</h1>
+        <h1 className="heading2">{content.resources.title}</h1>
         <Spacer size={20} />
         <List>
           {content.resources.list.map((resource, index) => (
@@ -99,7 +110,7 @@ export default function Page() {
           ))}
         </List>
         <Spacer size={100} />
-        <h2 className="heading2">{content.publications.title}</h2>
+        <h1 className="heading2">{content.publications.title}</h1>
         <Spacer size={20} />
         <List>
           {content.publications.list.map((publication, index) => (
