@@ -25,7 +25,7 @@ export const Project = ({
             <span>{data.title}</span>
           </h2>
         )}
-        <p className="bodyLarge">
+        <p className="body">
           {data.partners.map((id, index) => {
             const partner = content.consortium.partners.list.find(
               (partner) => partner.id === id
