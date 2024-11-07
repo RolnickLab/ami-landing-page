@@ -1,47 +1,25 @@
 {
   "title": "Automated Monitoring of Insects",
-  "subTitle": "Empowering local communities to protect and conserve biodiversity by generating labelled insect data at wide spatial, temporal and taxonomic scales.",
+  "subTitle": "Empowering local communities to protect and conserve biodiversity",
   "about": [
     {
       "title": "What is Automated Monitoring of Insects (AMI)?",
-      "description": "AMI is a non-lethal, end-to-end monitoring solution for automated insect detection and species classification that leverages machine learning (artificial intelligence). AMI can be used to generate, process, quality control, compile and analyse large batches of standardised data in near real-time. It is brought to you by a <a href=\"/consortium\">consortium of international experts</a>."
+      "description": [
+        "AMI is a consortium of <a href=\"/consortium\">international experts</a> developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage machine learning (artificial intelligence). Through technologies such as high-resolution cameras, low-cost sensors, and AI-based processing methods, AMI aims to make insect monitoring less labour-intensive, more user-friendly, and more effective at determining the state of insect populations across the globe. AMI strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring and conservation efforts."
+      ]
     },
     {
       "title": "Why AMI is Needed",
-      "description": "There are over a million known species of insects on Earth, representing nearly one half of all known organisms. Insects provide essential services that are critical for humans, such as the pollination of fruit, vegetables, and flowers or the control of pests and disease vectors, among others. Insect populations are declining in abundance and diversity due to multiple stressors including deforestation and insecticides. These changes raise concerns about ecosystem health and potential global ecological and economic consequences.\n\nStill, data on insect populations is sparse. It is challenging and resource-intensive to collect data and train subject matter experts to scale up the study and conservation of insects. There is therefore a worldwide need for robust, cost-effective methods to fill the data gap in a way that minimizes bias and maximizes the quantity and quality of data collected.\n\nAMI fills that gap to enable scientists to track or predict insect biodiversity loss and mitigate its impacts on human health, livelihoods, and economies. Note that AMI currently focuses on moth monitoring."
+      "description": [
+        "There are over a million known species of insects on Earth, representing nearly one half of all known organisms. Insects are instrumental to ecosystem functioning and provide services that are critical for humans, such as pollination, the control of pests and disease vectors, and many others. In many areas, the populations of a wide array of insect species are declining in abundance and diversity due to multiple stressors including climate change and human augmented landscapes. These changes raise concerns about the knock-on impact on ecosystem health and potential global ecological and economic consequences.",
+        "Still, data on insect populations remains sparse. It is challenging and resource-intensive to collect and process data as well as to train subject matter experts to support the study and conservation of insects. There is therefore a worldwide need for robust, cost-effective monitoring methods to fill the data gap in a way that minimizes bias and maximizes the quantity and quality of data collected.",
+        "AMI addreses this gap and enables scientists to track or predict insect biodiversity loss and mitigate its impacts on ecosystem functioning, human health, livelihoods, and economies. Note that AMI currently focuses on the monitoring of one of most biodiverse groups of insects: moths."
+      ]
     }
   ],
   "projects": {
     "title": "The AMI Solutions",
-    "description": "Collectively, the AMI Solutions cover the entire lifecycle of the data: the hardware to capture images, the software to classify the images, and tools to support ecological insights. All services are <i>à la carte</i>: they exist independently and each can be opted in or out, following your needs and preferences.",
-    "list": [
-      {
-        "image": "/hardware.png",
-        "title": "Hardware",
-        "description": "The UKCEH AMI System consists of UV and white lights for attracting moths, high-capacity data storage to collate images over long sampling periods, battery and solar power to allow for deployment away from mains power, and customisable sampling schedules. Images collected can be processed through one’s own workflow or using the AMI Data Platform. Work is underway to add additional features to the AMI system to widen the taxonomic groups that it can monitor. The addition of audible and ultrasound recording will shortly increase the taxonomic coverage of the trap to include birds, bats, and orthoptera.",
-        "href": "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap"
-      },
-      {
-        "image": "/data-management.png",
-        "title": "Data Management",
-        "description": "The AMI Data Platform is a hub for labelled insect data at wide spatial, temporal and taxonomic scales. Mila researchers as well as AMI partners have developed machine learning (ML) algorithms to automatically and efficiently organise its large amounts of data. For those looking to label insect images, contribute ecological knowledge, and/or access insect data, the Platform offers a full range of services:",
-        "listItems": [
-          "automated detection of insects in images",
-          "fine-grained taxonomic classification",
-          "expert validation of classifications",
-          "new species discovery using the GBIF and Darwin Core Standards",
-          "curation of datasets across species and locations",
-          "data exploration and download for analysis"
-        ],
-        "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
-      },
-      {
-        "image": "/analytical-toolbox.png",
-        "title": "Ecological Knowledge",
-        "description": "The AMI Consortium strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring efforts. The AMI Data Platform will continue to evolve as a medium to facilitate interdisciplinary collaboration and sharing. AMI partners are developing tools and guidelines to boost analytical quality and actionable insights. Already, machine learning models can be reviewed and co-developed with ecologists through the Platform’s GitHub repository; entomologists can provide quality assurance for machine-generated classifications; ecologists can publish programming libraries and best practices for the rigorous and streamlined analysis of AMI datasets. We hope that AMI users will contribute their own specialised aids to the Community toolbox to accelerate our collective efforts towards biodiversity understanding and conservation.",
-        "href": "https://mila.quebec/en/automated-monitoring-of-insects-ami"
-      }
-    ]
+    "description": "Collectively, the AMI Consortium offers a range of solutions that cover the entire lifecycle of automated insect monitoring data: the hardware to capture images, the software to classify the images, and tools to support ecological insights."
   },
   "resources": {
     "title": "Resources",
@@ -57,12 +35,17 @@
     "title": "Academic Publications",
     "list": [
       {
+        "title": "An Automated Light Trap to Monitor Moths (Lepidoptera) Using Computer Vision-Based Tracking and Deep Learning",
+        "description": "We present a portable computer vision system capable of attracting and detecting live insects. More specifically, the paper proposes detection and classification of species by recording images of live individuals attracted to a light trap. An Automated Moth Trap (AMT) with multiple light sources and a camera was designed to attract and monitor live insects during twilight and night hours. A computer vision algorithm referred to as Moth Classification and Counting (MCC), based on deep learning analysis of the captured images, tracked and counted the number of insects and identified moth species.",
+        "href": "https://doi.org/10.3390/s21020343"
+      },
+      {
         "title": "Insect Identification in the Wild: The AMI Dataset",
         "description": "We provide the first large-scale machine learning benchmarks for fine-grained insect recognition, designed to match real-world tasks faced by ecologists.",
         "href": "https://arxiv.org/abs/2406.12452"
       },
       {
-        "title": "Towards a standardized framework for AI-assisted, image-based monitoring of nocturnal insects",
+        "title": "Towards a standardized framework for AI-assisted, image-based monitoring of nocturnal insects.",
         "description": "We describe computer vision approaches for the detection, tracking and classification of insects, including models built from existing aggregations of labelled insect images. We propose ten priorities towards a step-change in automated monitoring of nocturnal insects, a vital task in the face of rapid biodiversity loss from global threats.",
         "href": "https://doi.org/10.1098/rstb.2023.0108"
       }
@@ -162,7 +145,7 @@
           "name": "Katriona Goldmann",
           "affiliation": "The Alan Turing Institute"
         },
-        { "name": "Toke Høye", "affiliation": "Aarhus University" },
+        { "name": "Toke Thomas Høye", "affiliation": "Aarhus University" },
         { "name": "Jenna Lawson", "affiliation": "UKCEH" },
         { "name": "Maxim Larrivée", "affiliation": "Montreal Space for Life" },
         { "name": "Marc Mazerolle", "affiliation": "Université Laval" },

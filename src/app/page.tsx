@@ -1,6 +1,5 @@
 import { Intro } from "@/components/intro/intro";
 import { List, ListItem } from "@/components/list/list";
-import { Project } from "@/components/project/project";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
@@ -48,10 +47,18 @@ export default function Page() {
             <div key={index}>
               <h2 className="heading2">{section.title}</h2>
               <Spacer size={20} />
-              <p
-                className="body"
-                dangerouslySetInnerHTML={{ __html: section.description }}
-              />
+              {section.description.map((__html, index) => (
+                <>
+                  <p
+                    key={index}
+                    className="body"
+                    dangerouslySetInnerHTML={{ __html }}
+                  />
+                  {index < section.description.length - 1 && (
+                    <Spacer size={20} />
+                  )}
+                </>
+              ))}
             </div>
           ))}
         </div>
@@ -67,9 +74,6 @@ export default function Page() {
               dangerouslySetInnerHTML={{ __html: content.projects.description }}
             />
           </div>
-          {content.projects.list.map((project, index) => (
-            <Project key={index} data={project} reverse={index % 2 === 0} />
-          ))}
         </div>
       </Section>
 
