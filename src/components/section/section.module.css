@@ -1,6 +1,7 @@
 .section {
   background-color: var(--background);
   padding: 100px 50px;
+  position: relative;
 }
 
 .tinted {

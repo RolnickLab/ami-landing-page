@@ -5,6 +5,7 @@ import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
 import content from "@/content.json";
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -14,6 +15,9 @@ export default function Page() {
     <>
       <Section theme="moth">
         <Intro title={content.title} subTitle={content.subTitle} />
+        <p className={classNames("bodyExtraSmall", styles.attribution)}>
+          Photo by Michael Bunsen
+        </p>
       </Section>
 
       <Section theme="tinted">

@@ -20,6 +20,13 @@
   height: auto;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: var(--background);
+}
+
 @media (max-width: 720px) {
   .content {
     align-items: stretch;
