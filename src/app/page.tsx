@@ -1,5 +1,5 @@
 import { Intro } from "@/components/intro/intro";
-import { List, ListItem } from "@/components/list/list";
+import { List, ListItem, ListItemContent } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
@@ -8,6 +8,8 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { LinkButton } from "@/components/button/button";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
   return (
@@ -73,6 +75,11 @@ export default function Page() {
               className="bodyLarge"
               dangerouslySetInnerHTML={{ __html: content.projects.description }}
             />
+            <Spacer size={40} />
+            <LinkButton href="/solutions">
+              Checkout the solutions
+              <ChevronRightIcon />
+            </LinkButton>
           </div>
         </div>
       </Section>
@@ -82,12 +89,13 @@ export default function Page() {
         <Spacer size={20} />
         <List>
           {content.resources.list.map((resource, index) => (
-            <ListItem
-              key={index}
-              title={resource.title}
-              description={resource.description}
-              href={resource.href}
-            />
+            <ListItem key={index}>
+              <ListItemContent
+                title={resource.title}
+                description={resource.description}
+                href={resource.href}
+              />
+            </ListItem>
           ))}
         </List>
         <Spacer size={100} />
@@ -95,12 +103,13 @@ export default function Page() {
         <Spacer size={20} />
         <List>
           {content.publications.list.map((publication, index) => (
-            <ListItem
-              key={index}
-              title={publication.title}
-              description={publication.description}
-              href={publication.href}
-            />
+            <ListItem key={index}>
+              <ListItemContent
+                title={publication.title}
+                description={publication.description}
+                href={publication.href}
+              />
+            </ListItem>
           ))}
         </List>
       </Section>

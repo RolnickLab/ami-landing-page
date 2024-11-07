@@ -5,10 +5,6 @@
 }
 
 .listItem {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
   padding: 20px 0;
 }
 
@@ -16,18 +12,30 @@
   border-bottom: 1px solid var(--border);
 }
 
-.listItem .intro {
+.listItemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.listItemContent .intro {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-.listItem .title {
+.listItemContent .linkIcon {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.listItemContent .title {
   color: var(--text);
 }
 
-.listItem .label {
+.listItemContent .label {
   text-align: right;
 }

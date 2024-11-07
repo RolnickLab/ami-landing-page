@@ -1,46 +1,78 @@
+import content from "@/content.json";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
-import Image from "next/image";
 import { BulletList } from "../bullet-list/bullet-list";
 import { ExternalLinkButton } from "../button/button";
 import styles from "./project.module.css";
 
 export const Project = ({
   data,
-  reverse,
 }: {
   data: {
-    image: string;
-    title: string;
-    description: string;
+    title?: string;
+    partners: string[];
+    categories: string[];
+    description: string[];
     listItems?: string[];
-    href: string;
+    href?: string;
   };
-  reverse?: boolean;
 }) => (
-  <div className={classNames(styles.project, { [styles.reverse]: reverse })}>
-    <Image
-      src={data.image}
-      alt=""
-      width={0}
-      height={0}
-      className={styles.image}
-    />
+  <div className={classNames(styles.project)}>
     <div className={styles.content}>
-      <h2 className="heading2">
-        <span className="block">{data.title}</span>
-      </h2>
-      <p
-        className="bodySmall"
-        dangerouslySetInnerHTML={{ __html: data.description }}
-      />
-      {data.listItems?.length ? (
-        <BulletList items={data.listItems} reverse={reverse} />
+      <div className={styles.group}>
+        {data.title && (
+          <h2 className="heading2">
+            <span>{data.title}</span>
+          </h2>
+        )}
+        <p className="bodyLarge">
+          {data.partners.map((id, index) => {
+            const partner = content.consortium.partners.list.find(
+              (partner) => partner.id === id
+            );
+            return (
+              <span key={id}>
+                <a
+                  href={partner?.href}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {partner?.label}
+                </a>
+                {data.partners.length - 1 > index && ", "}
+              </span>
+            );
+          })}
+        </p>
+        <div className={styles.categories}>
+          {data.categories.map((id) => {
+            const category = content.categories.find(
+              (category) => category.id === id
+            );
+            return (
+              <span key={id} className="bodyExtraSmall block">
+                {category?.label}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+      <div className={styles.group}>
+        {data.description.map((__html, index) => (
+          <p
+            key={index}
+            className="bodySmall"
+            dangerouslySetInnerHTML={{ __html }}
+          />
+        ))}
+        {data.listItems?.length ? <BulletList items={data.listItems} /> : null}
+      </div>
+      {data.href ? (
+        <ExternalLinkButton href={data.href}>
+          <span>Learn more</span>
+          <ExternalLinkIcon />
+        </ExternalLinkButton>
       ) : null}
-      <ExternalLinkButton href={data.href}>
-        <span>Learn more</span>
-        <ExternalLinkIcon />
-      </ExternalLinkButton>
     </div>
   </div>
 );

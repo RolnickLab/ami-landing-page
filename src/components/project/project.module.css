@@ -1,46 +1,23 @@
 .project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin: 0 -100px;
+  padding: 20px 0;
 }
 
 .content {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
+  gap: 40px;
 }
 
-.project.reverse .content {
-  grid-column: 1;
-  grid-row: 1;
-  text-align: right;
-  align-items: flex-end;
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.image {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 720px) {
-  .project {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin: 0;
-    background: var(--background);
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
-
-  .content,
-  .project.reverse .content {
-    padding: 20px;
-    align-items: flex-start;
-    text-align: left;
-  }
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }

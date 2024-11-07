@@ -8,7 +8,11 @@ export const List = ({ children }: { children: ReactNode }) => (
   <div className={styles.list}>{children}</div>
 );
 
-export const ListItem = ({
+export const ListItem = ({ children }: { children: ReactNode }) => (
+  <div className={styles.listItem}>{children}</div>
+);
+
+export const ListItemContent = ({
   title,
   label,
   description,
@@ -19,13 +23,15 @@ export const ListItem = ({
   description?: string;
   href?: string;
 }) => (
-  <div className={styles.listItem}>
+  <div className={styles.listItemContent}>
     <div className={styles.intro}>
       {href ? (
-        <ExternalLinkButton href={href} theme="text">
-          <span>{title}</span>
-          <ExternalLinkIcon />
-        </ExternalLinkButton>
+        <p className="bodySmall">
+          <a href={href} rel="noopener noreferrer" target="_blank">
+            {title}
+            <ExternalLinkIcon className={styles.linkIcon} />
+          </a>
+        </p>
       ) : (
         <span className={classNames("bodySmall", styles.title)}>{title}</span>
       )}
@@ -35,7 +41,6 @@ export const ListItem = ({
         </span>
       )}
     </div>
-
     {description && <span className="bodySmall">{description}</span>}
   </div>
 );

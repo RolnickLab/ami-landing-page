@@ -1,4 +1,4 @@
-import { List, ListItem } from "@/components/list/list";
+import { List, ListItem, ListItemContent } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import content from "@/content.json";
@@ -17,12 +17,13 @@ export default function Page() {
         <Spacer size={40} />
         <List>
           {content.consortium.partners.list.map((partner, index) => (
-            <ListItem
-              key={index}
-              title={partner.label}
-              label={partner.location}
-              href={partner.href}
-            />
+            <ListItem key={index}>
+              <ListItemContent
+                title={partner.label}
+                label={partner.location}
+                href={partner.href}
+              />
+            </ListItem>
           ))}
         </List>
       </Section>
@@ -42,11 +43,9 @@ export default function Page() {
         <Spacer size={40} />
         <List>
           {content.consortium.committee.list.map((member, index) => (
-            <ListItem
-              key={index}
-              title={member.name}
-              label={member.affiliation}
-            />
+            <ListItem key={index}>
+              <ListItemContent title={member.name} label={member.affiliation} />
+            </ListItem>
           ))}
         </List>
       </Section>
