@@ -2,14 +2,12 @@
   "title": "Automated Monitoring of Insects",
   "subTitle": "Empowering local communities to protect and conserve biodiversity",
   "categories": [
-    { "id": "all", "label": "All categories" },
     { "id": "software", "label": "Software" },
     { "id": "hardware", "label": "Hardware" },
     { "id": "analysis", "label": "Data sampling and analysis" },
     { "id": "knowledge", "label": "Knowledge exchange" },
     { "id": "conservation", "label": "Conservation" }
   ],
-
   "about": {
     "intro": {
       "title": "What is Automated Monitoring of Insects (AMI)?",

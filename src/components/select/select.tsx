@@ -10,7 +10,7 @@ export const Select = ({
   onValueChange,
 }: {
   items: { id: string; label: string }[];
-  placeholder: string;
+  placeholder?: string;
   value: string;
   onValueChange: (value: string) => void;
 }) => (

@@ -3,6 +3,29 @@ import Link from "next/link";
 import { CSSProperties, ReactNode } from "react";
 import styles from "./button.module.css";
 
+export const Button = ({
+  children,
+  style,
+  theme = "outline",
+  onClick,
+}: {
+  children: ReactNode;
+  style?: CSSProperties;
+  theme?: "outline" | "text";
+  onClick: () => void;
+}) => (
+  <button
+    className={classNames("bodySmall", styles.button, {
+      [styles.outline]: theme === "outline",
+      [styles.text]: theme === "text",
+    })}
+    style={style}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
+
 export const LinkButton = ({
   children,
   href,
