@@ -10,6 +10,7 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -73,14 +74,16 @@ export default function Page() {
           <div>
             <h2 className="heading2">{content.about.content.title}</h2>
             <Spacer size={20} />
-            {content.about.content.description.map((__html, index) => (
-              <div key={index} className={styles.aboutContent}>
-                <p className="body" dangerouslySetInnerHTML={{ __html }} />
-                {index < content.about.content.description.length - 1 && (
-                  <Spacer size={20} />
-                )}
-              </div>
-            ))}
+            <div className={styles.aboutContent}>
+              {content.about.content.description.map((__html, index) => (
+                <Fragment key={index}>
+                  <p className="body" dangerouslySetInnerHTML={{ __html }} />
+                  {index < content.about.content.description.length - 1 && (
+                    <Spacer size={20} />
+                  )}
+                </Fragment>
+              ))}
+            </div>
           </div>
 
           <div>
