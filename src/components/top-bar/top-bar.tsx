@@ -14,9 +14,9 @@ const CONTACT_MAIL =
 const MENU_ITEMS = [
   { label: "Home", labelShort: "Home", href: "/" },
   {
-    label: "The AMI Solutions",
-    labelShort: "Solutions",
-    href: "/solutions",
+    label: "The AMI Initiatives",
+    labelShort: "Initiatives",
+    href: "/initiatives",
   },
   {
     label: "The AMI Consortium",

@@ -43,12 +43,12 @@ export default function Page() {
 
   const label = useMemo(() => {
     if (projects.length === 0) {
-      return "No projects to show.";
+      return "No initiatives to show.";
     }
     if (projects.length === 1) {
-      return "Showing 1 project:";
+      return "Showing 1 initiative:";
     }
-    return `Showing ${projects.length} projects:`;
+    return `Showing ${projects.length} initiatives:`;
   }, [projects]);
 
   return (

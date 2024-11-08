@@ -110,8 +110,8 @@ export default function Page() {
               dangerouslySetInnerHTML={{ __html: content.projects.description }}
             />
             <Spacer size={40} />
-            <LinkButton href="/solutions">
-              Checkout the solutions
+            <LinkButton href="/initiatives">
+              Checkout the initiatives
               <ChevronRightIcon />
             </LinkButton>
           </div>
