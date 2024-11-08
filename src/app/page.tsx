@@ -46,23 +46,27 @@ export default function Page() {
 
       <Section>
         <div className={styles.content}>
-          <div>
-            <h2 className="heading2">{content.about.intro.title}</h2>
-            <Spacer size={20} />
-            <div className={styles.aboutIntro}>
+          <div className={styles.aboutIntro}>
+            <div>
+              <h2 className="heading2">{content.about.intro.title}</h2>
+              <Spacer size={20} />
               <p
                 className="body"
                 dangerouslySetInnerHTML={{
                   __html: content.about.intro.description,
                 }}
               />
+            </div>
+            <div>
               <Image
-                src="/flower.png"
+                src="/moth_02.jpg"
                 alt=""
                 width={512}
                 height={512}
                 style={{ width: "100%", height: "auto" }}
               />
+              <Spacer size={10} />
+              <p className="bodyExtraSmall">Photo by Anna Viklund</p>
             </div>
           </div>
 
@@ -83,12 +87,12 @@ export default function Page() {
             <Image
               src="/moths.jpg"
               alt=""
-              width={1000}
-              height={667}
+              width={1024}
+              height={683}
               style={{ width: "100%", height: "auto" }}
             />
             <Spacer size={10} />
-            <p className="bodySmall">Photo by Michael Bunsen</p>
+            <p className="bodyExtraSmall">Photo by Michael Bunsen</p>
           </div>
         </div>
       </Section>
