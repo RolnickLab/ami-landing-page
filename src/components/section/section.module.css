@@ -18,18 +18,25 @@
 .moth {
   background-color: var(--background-tinted);
   background-image: url("/moth.jpg");
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .content {
-  max-width: 640px;
+  width: 80%;
+  max-width: 1024px;
   margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
   .section {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 }

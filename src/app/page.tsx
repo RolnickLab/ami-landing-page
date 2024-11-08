@@ -1,6 +1,7 @@
 import { LinkButton } from "@/components/button/button";
+import { Card, Cards } from "@/components/card/card";
+import { ExternalLink } from "@/components/external-link/external-link";
 import { Intro } from "@/components/intro/intro";
-import { List, ListItem, ListItemContent } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
@@ -9,7 +10,6 @@ import { ChevronRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -46,20 +46,39 @@ export default function Page() {
 
       <Section>
         <div className={styles.content}>
-          {content.about.map((section, index) => (
-            <div key={index}>
-              <h2 className="heading2">{section.title}</h2>
-              <Spacer size={20} />
-              {section.description.map((__html, index) => (
-                <Fragment key={index}>
-                  <p className="body" dangerouslySetInnerHTML={{ __html }} />
-                  {index < section.description.length - 1 && (
-                    <Spacer size={20} />
-                  )}
-                </Fragment>
-              ))}
+          <div>
+            <h2 className="heading2">{content.about.intro.title}</h2>
+            <Spacer size={20} />
+            <div className={styles.aboutIntro}>
+              <p
+                className="body"
+                dangerouslySetInnerHTML={{
+                  __html: content.about.intro.description,
+                }}
+              />
+              <Image
+                src="/flower.png"
+                alt=""
+                width={512}
+                height={512}
+                style={{ width: "100%", height: "auto" }}
+              />
             </div>
-          ))}
+          </div>
+
+          <div>
+            <h2 className="heading2">{content.about.content.title}</h2>
+            <Spacer size={20} />
+            {content.about.content.description.map((__html, index) => (
+              <div key={index} className={styles.aboutContent}>
+                <p className="body" dangerouslySetInnerHTML={{ __html }} />
+                {index < content.about.content.description.length - 1 && (
+                  <Spacer size={20} />
+                )}
+              </div>
+            ))}
+          </div>
+
           <div>
             <Image
               src="/moths.jpg"
@@ -95,31 +114,39 @@ export default function Page() {
       <Section>
         <h1 className="heading2">{content.resources.title}</h1>
         <Spacer size={20} />
-        <List>
+        <Cards>
           {content.resources.list.map((resource, index) => (
-            <ListItem key={index}>
-              <ListItemContent
-                title={resource.title}
-                description={resource.description}
-                href={resource.href}
-              />
-            </ListItem>
+            <Card key={index}>
+              <>
+                <p className="body">
+                  <ExternalLink href={resource.href}>
+                    {resource.title}
+                  </ExternalLink>
+                </p>
+                <Spacer size={10} />
+                <p className="bodySmall">{resource.description}</p>
+              </>
+            </Card>
           ))}
-        </List>
+        </Cards>
         <Spacer size={100} />
         <h1 className="heading2">{content.publications.title}</h1>
         <Spacer size={20} />
-        <List>
+        <Cards>
           {content.publications.list.map((publication, index) => (
-            <ListItem key={index}>
-              <ListItemContent
-                title={publication.title}
-                description={publication.description}
-                href={publication.href}
-              />
-            </ListItem>
+            <Card key={index}>
+              <>
+                <p className="body">
+                  <ExternalLink href={publication.href}>
+                    {publication.title}
+                  </ExternalLink>
+                </p>
+                <Spacer size={20} />
+                <p className="bodySmall">{publication.description}</p>
+              </>
+            </Card>
           ))}
-        </List>
+        </Cards>
       </Section>
 
       <Section theme="tinted">

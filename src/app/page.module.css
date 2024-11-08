@@ -7,17 +7,29 @@
 }
 
 .logos {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 40px;
   text-align: center;
 }
 
 .logo {
-  width: 100%;
+  width: 200px;
   height: auto;
+}
+
+.aboutIntro {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  align-items: center;
+  gap: 40px;
+}
+
+.aboutContent {
+  column-count: 2;
+  column-gap: 40px;
 }
 
 .attribution {
@@ -28,9 +40,20 @@
 }
 
 @media (max-width: 720px) {
+  .aboutIntro {
+    grid-template-columns: 1fr;
+  }
+  .aboutIntro img {
+    display: none;
+  }
+
+  .aboutContent {
+    column-count: auto;
+  }
+
   .content {
     align-items: stretch;
-    gap: 50px;
+    gap: 40px;
   }
 
   .logos {

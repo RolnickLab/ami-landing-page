@@ -1,7 +1,6 @@
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import { ReactNode } from "react";
-import { ExternalLinkButton } from "../button/button";
+import { ExternalLink } from "../external-link/external-link";
 import styles from "./list.module.css";
 
 export const List = ({ children }: { children: ReactNode }) => (
@@ -15,32 +14,20 @@ export const ListItem = ({ children }: { children: ReactNode }) => (
 export const ListItemContent = ({
   title,
   label,
-  description,
   href,
 }: {
   title: string;
-  label?: string;
-  description?: string;
+  label: string;
   href?: string;
 }) => (
   <div className={styles.listItemContent}>
-    <div className={styles.intro}>
+    <p className="bodySmall">
       {href ? (
-        <p className="bodySmall">
-          <a href={href} rel="noopener noreferrer" target="_blank">
-            {title}
-            <ExternalLinkIcon className={styles.linkIcon} />
-          </a>
-        </p>
+        <ExternalLink href={href}>{title}</ExternalLink>
       ) : (
-        <span className={classNames("bodySmall", styles.title)}>{title}</span>
+        <span className={styles.title}>{title}</span>
       )}
-      {label && (
-        <span className={classNames("bodyExtraSmall", styles.label)}>
-          {label}
-        </span>
-      )}
-    </div>
-    {description && <span className="bodySmall">{description}</span>}
+    </p>
+    <span className={classNames("bodyExtraSmall", styles.label)}>{label}</span>
   </div>
 );

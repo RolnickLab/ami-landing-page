@@ -30,32 +30,34 @@ export const TopBar = () => {
 
   return (
     <header className={styles.topBar}>
-      <Link href="/">
-        <AMILogo size={50} />
-      </Link>
-      <nav className={styles.menu}>
-        {MENU_ITEMS.map((menuItem, index) => (
-          <Link
-            key={index}
-            href={menuItem.href}
-            className={classNames("bodySmall", styles.menuItem, {
-              [styles.active]: currentPath === menuItem.href,
-            })}
-          >
-            <span className={styles.label}>{menuItem.label}</span>
-            <span className={styles.labelShort}>{menuItem.labelShort}</span>
-            <span className={styles.line} />
-          </Link>
-        ))}
-      </nav>
-      <LinkButton
-        href={`mailto:${CONTACT_MAIL}`}
-        style={{ color: "var(--text)" }}
-        theme="text"
-      >
-        <EnvelopeClosedIcon />
-        <span className={styles.label}>Contact Us</span>
-      </LinkButton>
+      <div className={styles.topBarContent}>
+        <Link href="/">
+          <AMILogo size={50} />
+        </Link>
+        <nav className={styles.menu}>
+          {MENU_ITEMS.map((menuItem, index) => (
+            <Link
+              key={index}
+              href={menuItem.href}
+              className={classNames("bodySmall", styles.menuItem, {
+                [styles.active]: currentPath === menuItem.href,
+              })}
+            >
+              <span className={styles.label}>{menuItem.label}</span>
+              <span className={styles.labelShort}>{menuItem.labelShort}</span>
+              <span className={styles.line} />
+            </Link>
+          ))}
+        </nav>
+        <LinkButton
+          href={`mailto:${CONTACT_MAIL}`}
+          style={{ color: "var(--text)" }}
+          theme="text"
+        >
+          <EnvelopeClosedIcon />
+          <span className={styles.label}>Contact Us</span>
+        </LinkButton>
+      </div>
     </header>
   );
 };

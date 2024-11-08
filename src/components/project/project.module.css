@@ -1,5 +1,6 @@
 .project {
-  padding: 20px 0;
+  padding: 40px;
+  border: 1px solid var(--border);
 }
 
 .content {

@@ -2,14 +2,21 @@
   position: sticky;
   top: 0;
   height: 60px;
+  padding: 0 50px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+
+.topBarContent {
+  width: 80%;
+  max-width: 1024px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
-  padding: 0 40px;
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid var(--border);
-  z-index: 1;
+  margin: 0 auto;
 }
 
 .menu {
@@ -67,8 +74,26 @@
   color: var(--primary);
 }
 
+@media (max-width: 960px) {
+  .topBarContent {
+    width: 100%;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .labelShort {
+    display: inline;
+  }
+}
+
 @media (max-width: 720px) {
   .topBar {
+    padding: 0;
+  }
+
+  .topBarContent {
     gap: 20px;
     padding: 0 20px;
   }
@@ -79,13 +104,5 @@
 
   .menuItem {
     font-size: 12px;
-  }
-
-  .label {
-    display: none;
-  }
-
-  .labelShort {
-    display: inline;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { List, ListItem } from "@/components/list/list";
+import { Card, Cards } from "@/components/card/card";
 import { Project } from "@/components/project/project";
 import { Section } from "@/components/section/section";
 import { Select } from "@/components/select/select";
@@ -44,13 +44,13 @@ export default function Page() {
         />
       </Section>
       <Section>
-        <List>
+        <Cards style={{ gridTemplateColumns: "1fr" }}>
           {sortedProjects.map((project) => (
-            <ListItem key={project.title}>
+            <Card key={project.title}>
               <Project data={project} />
-            </ListItem>
+            </Card>
           ))}
-        </List>
+        </Cards>
       </Section>
     </>
   );

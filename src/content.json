@@ -9,14 +9,13 @@
     { "id": "knowledge", "label": "Knowledge exchange" },
     { "id": "conservation", "label": "Conservation" }
   ],
-  "about": [
-    {
+
+  "about": {
+    "intro": {
       "title": "What is Automated Monitoring of Insects (AMI)?",
-      "description": [
-        "AMI is a consortium of <a href=\"/consortium\">international experts</a> developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage machine learning (artificial intelligence). Through technologies such as high-resolution cameras, low-cost sensors, and AI-based processing methods, AMI aims to make insect monitoring less labour-intensive, more user-friendly, and more effective at determining the state of insect populations across the globe. AMI strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring and conservation efforts."
-      ]
+      "description": "AMI is a consortium of <a href=\"/consortium\">international experts</a> developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage machine learning (artificial intelligence). Through technologies such as high-resolution cameras, low-cost sensors, and AI-based processing methods, AMI aims to make insect monitoring less labour-intensive, more user-friendly, and more effective at determining the state of insect populations across the globe. AMI strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring and conservation efforts."
     },
-    {
+    "content": {
       "title": "Why AMI is Needed",
       "description": [
         "There are over a million known species of insects on Earth, representing nearly one half of all known organisms. Insects are instrumental to ecosystem functioning and provide services that are critical for humans, such as pollination, the control of pests and disease vectors, and many others. In many areas, the populations of a wide array of insect species are declining in abundance and diversity due to multiple stressors including climate change and human augmented landscapes. These changes raise concerns about the knock-on impact on ecosystem health and potential global ecological and economic consequences.",
@@ -24,7 +23,7 @@
         "AMI addreses this gap and enables scientists to track or predict insect biodiversity loss and mitigate its impacts on ecosystem functioning, human health, livelihoods, and economies. Note that AMI currently focuses on the monitoring of one of most biodiverse groups of insects: moths."
       ]
     }
-  ],
+  },
   "projects": {
     "title": "The AMI Solutions",
     "description": [
@@ -180,6 +179,10 @@
       {
         "src": "https://globalnews.ca/video/embed/10188149/",
         "caption": "How Montreal researchers are using AI to discover new species"
+      },
+      {
+        "src": "https://www.youtube.com/embed/VXJ40hAmTZY?si=0Rc2Zgwja_dk4V9P",
+        "caption": "Antenna - L'IA pour protéger la biodiversité | Antenna - AI to protect biodiversity"
       }
     ]
   },
@@ -234,7 +237,7 @@
         },
         {
           "id": "usherbrooke",
-          "logo": "/partners/universite-de-sherbrooke.webp",
+          "logo": "/partners/universite-de-sherbrooke.png",
           "label": "Université de Sherbrooke",
           "location": "Canada",
           "href": "https://www.usherbrooke.ca/"
