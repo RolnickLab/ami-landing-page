@@ -11,21 +11,21 @@
   "about": {
     "intro": {
       "title": "What is Automated Monitoring of Insects (AMI)?",
-      "description": "AMI is a consortium of <a href=\"/consortium\">international experts</a> developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage machine learning (artificial intelligence). Through technologies such as high-resolution cameras, low-cost sensors, and AI-based processing methods, AMI aims to make insect monitoring less labour-intensive, more user-friendly, and more effective at determining the state of insect populations across the globe. AMI strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring and conservation efforts."
+      "description": "AMI is an <a href=\"/consortium\">international consortium of experts</a> developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage artificial intelligence (AI). Through technologies such as high-resolution cameras, low-cost sensors, and AI-based processing methods, AMI aims to make insect monitoring less labour-intensive, more user-friendly, and more effective at determining the state of insect populations across the globe. AMI strives to foster partnerships and knowledge-sharing to maximize the impact of monitoring and conservation efforts."
     },
     "content": {
       "title": "Why AMI is Needed",
       "description": [
-        "There are over a million known species of insects on Earth, representing nearly one half of all known organisms. Insects are instrumental to ecosystem functioning and provide services that are critical for humans, such as pollination, the control of pests and disease vectors, and many others. In many areas, the populations of a wide array of insect species are declining in abundance and diversity due to multiple stressors including climate change and human augmented landscapes. These changes raise concerns about the knock-on impact on ecosystem health and potential global ecological and economic consequences.",
+        "There are over a million known species of insects on Earth, representing nearly one half of all known organisms. Insects are instrumental to ecosystem functioning and provide services that are critical for humans, such as pollination and the control of pests and disease vectors. In many areas, the populations of a wide array of insect species are declining in abundance and diversity due to multiple stressors including climate change and human augmented landscapes. These changes raise concerns about the knock-on impact on ecosystem health and potential global ecological and economic consequences.",
         "Still, data on insect populations remains sparse. It is challenging and resource-intensive to collect and process data as well as to train subject matter experts to support the study and conservation of insects. There is therefore a worldwide need for robust, cost-effective monitoring methods to fill the data gap in a way that minimizes bias and maximizes the quantity and quality of data collected.",
-        "AMI addreses this gap and enables scientists to track or predict insect biodiversity loss and mitigate its impacts on ecosystem functioning, human health, livelihoods, and economies. Note that AMI currently focuses on the monitoring of one of most biodiverse groups of insects: moths."
+        "AMI addresses this gap and enables scientists to track or predict insect biodiversity loss and mitigate its impacts on ecosystem functioning, human health, livelihoods, and economies. AMI currently focuses on the monitoring of one of the most biodiverse groups of insects: moths."
       ]
     }
   },
   "projects": {
     "title": "The AMI Initiatives",
     "description": [
-      "Collectively, the AMI Consortium offers a range of solutions that cover the entire lifecycle of automated insect monitoring data: the hardware to capture images, the software to classify the images, and tools to support ecological insights."
+      "Collectively, the AMI Consortium offers a range of initiatives that cover the entire lifecycle of automated insect monitoring data: the hardware to capture images, the software to classify the images, and tools to support ecological insights."
     ],
     "list": [
       {
@@ -68,16 +68,16 @@
         "partners": ["mila", "espacepourlavie"],
         "title": "Antenna",
         "description": [
-          "The Antenna Data Platform is an interdisciplinary hub for labelled insect data at wide spatial, temporal and taxonomic scales.",
-          "Mila researchers have developed machine learning (ML) algorithms to automatically and efficiently detect and classify moths in large columns of images. The Platform offers a full range of services:"
+          "The Antenna Data Platform is an interdisciplinary hub for automatically processing insect data at wide spatial, temporal and taxonomic scales.",
+          "The platform uses state-of-the-art machine learning algorithms developed by Mila researchers to detect and classify insects in large volumes of images. Antenna offers a full range of functions:"
         ],
         "listItems": [
           "Automated detection of insects in images",
-          "Fine-grained taxonomic classification",
+          "Species-level taxonomic classification of moths",
           "Expert validation of classifications",
-          "New species discovery using the GBIF and Darwin Core Standards",
           "Curation of datasets across species and locations",
-          "Data exploration and download for analysis"
+          "Data exploration and download for analysis",
+          "(Coming soon!) New species discovery using the GBIF and Darwin Core Standards"
         ],
         "href": "https://www.insectai.org/",
         "categories": ["software"]
