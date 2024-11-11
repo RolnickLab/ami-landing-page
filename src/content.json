@@ -198,8 +198,8 @@
     "title": "The AMI Consortium",
     "description": "Our mission is to establish standardized and scalable automated monitoring systems for insect data to advance ecological understanding and conservation efforts globally through international and interdisciplinary collaboration.",
     "partners": {
-      "title": "Consortium Core Partners",
-      "titleShort": "Core Partners",
+      "title": "Consortium Core Members",
+      "titleShort": "Core Members",
       "list": [
         {
           "id": "au",

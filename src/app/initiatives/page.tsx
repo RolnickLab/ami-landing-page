@@ -72,11 +72,11 @@ export default function Page() {
             />
           </div>
           <div className={styles.control}>
-            <span className="bodySmall">Partner</span>
+            <span className="bodySmall">Member</span>
             <Spacer size={10} />
             <Select
               items={[
-                { label: "All partners", id: ITEM_ALL_ID },
+                { label: "All members", id: ITEM_ALL_ID },
                 ...content.consortium.partners.list,
               ]}
               value={partner}
