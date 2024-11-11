@@ -1,7 +1,8 @@
 :root {
   /* Colors */
   --background: #ffffff;
-  --background-tinted: #f4f8fe80;
+  --background-tinted: #f4f8fe;
+  --background-tinted-transparent: #f4f8fe80;
   --text: #222426;
   --text-low-contrast: #6f7172;
   --primary: #5f8ac6;

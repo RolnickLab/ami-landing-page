@@ -6,7 +6,7 @@ import { ChevronLeftIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
   return (
-    <Section theme="tinted">
+    <Section theme="paper">
       <div className={styles.content} style={{ gap: 0 }}>
         <h1 className="heading1">404</h1>
         <Spacer size={20} />

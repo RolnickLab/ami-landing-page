@@ -57,8 +57,7 @@ export default function Page() {
         <h1 className="heading1">{content.projects.title}</h1>
         <Spacer size={20} />
         <p className="bodyLarge">{content.projects.description}</p>
-      </Section>
-      <Section>
+        <Spacer size={40} />
         <div className={styles.controls}>
           <div className={styles.control}>
             <span className="bodySmall">Category</span>
@@ -97,6 +96,9 @@ export default function Page() {
             </div>
           ) : null}
         </div>
+      </Section>
+
+      <Section theme="paper">
         <span className="bodySmall">{label}</span>
         <Spacer size={20} />
         <Cards style={{ gridTemplateColumns: "1fr" }}>

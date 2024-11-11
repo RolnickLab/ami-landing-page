@@ -4,8 +4,20 @@
   position: relative;
 }
 
+.moth {
+  background-color: var(--background-tinted);
+  background-image: url("/moth_01.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .tinted {
   background-color: var(--background-tinted);
+}
+
+.paper {
+  background-color: var(--background-tinted-transparent);
   background-size: 20px 20px;
   background-image: linear-gradient(
       to right,
@@ -13,14 +25,6 @@
       transparent 1px
     ),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-}
-
-.moth {
-  background-color: var(--background-tinted);
-  background-image: url("/moth_01.jpg");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .content {

@@ -7,12 +7,13 @@ export const Section = ({
   theme,
 }: {
   children: ReactNode;
-  theme?: "tinted" | "moth";
+  theme?: "moth" | "tinted" | "paper";
 }) => (
   <div
     className={classNames(styles.section, {
-      [styles.tinted]: theme === "tinted",
       [styles.moth]: theme === "moth",
+      [styles.tinted]: theme === "tinted",
+      [styles.paper]: theme === "paper",
     })}
   >
     <div className={styles.content}>{children}</div>

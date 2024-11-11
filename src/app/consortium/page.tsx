@@ -12,6 +12,7 @@ export default function Page() {
         <Spacer size={20} />
         <p className="bodyLarge">{content.consortium.description}</p>
       </Section>
+
       <Section>
         <h2 className="heading2">{content.consortium.partners.title}</h2>
         <Spacer size={40} />
@@ -27,7 +28,8 @@ export default function Page() {
           ))}
         </List>
       </Section>
-      <Section theme="tinted">
+
+      <Section theme="paper">
         <Image
           src={content.consortium.people.image}
           alt=""
@@ -38,6 +40,7 @@ export default function Page() {
         <Spacer size={10} />
         <p className="bodySmall">{content.consortium.people.caption}</p>
       </Section>
+
       <Section>
         <h2 className="heading2">{content.consortium.committee.title}</h2>
         <Spacer size={40} />

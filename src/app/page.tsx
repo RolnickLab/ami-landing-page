@@ -23,7 +23,7 @@ export default function Page() {
         </p>
       </Section>
 
-      <Section theme="tinted">
+      <Section theme="paper">
         <p className="body" style={{ textAlign: "center" }}>
           <span className="block">
             {content.consortium.partners.titleShort}
@@ -118,8 +118,8 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section>
-        <h1 className="heading2">{content.resources.title}</h1>
+      <Section theme="paper">
+        <h1 className="heading1">{content.resources.title}</h1>
         <Spacer size={20} />
         <Cards>
           {content.resources.list.map((resource, index) => (
@@ -137,7 +137,7 @@ export default function Page() {
           ))}
         </Cards>
         <Spacer size={100} />
-        <h1 className="heading2">{content.publications.title}</h1>
+        <h1 className="heading1">{content.publications.title}</h1>
         <Spacer size={20} />
         <Cards>
           {content.publications.list.map((publication, index) => (
@@ -156,7 +156,7 @@ export default function Page() {
         </Cards>
       </Section>
 
-      <Section theme="tinted">
+      <Section>
         <div className={styles.content}>
           <h1 className="heading1">{content.media.title}</h1>
           {content.media.list.map(({ src, caption }, index) => (
