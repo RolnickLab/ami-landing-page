@@ -141,9 +141,19 @@
     "title": "Resources",
     "list": [
       {
+        "title": "Antenna",
+        "description": "The Antenna Data Platform is an interdisciplinary hub for automatically processing insect data at wide spatial, temporal and taxonomic scales. The platform uses state-of-the-art machine learning algorithms developed by Mila researchers to detect and classify insects in large volumes of images.",
+        "href": "https://insectai.org"
+      },
+      {
         "title": "The AMI Dataset",
-        "description": "The AMI (Automated Monitoring of Insects) dataset, consists of two parts: 1) AMI-GBIF, a dataset of ∼2.5M human-captured insect images curated from citizen science platforms and museum collections, 2) AMI-Traps, an expert-annotated dataset of 2,893 insect camera trap images (representing 52,948 labeled insects) collected from a global network of automated camera traps, designed to test in-the-wild performance.",
+        "description": "The AMI Dataset, consists of two parts: 1) AMI-GBIF, a dataset of ∼2.5M human-captured insect images curated from citizen science platforms and museum collections, 2) AMI-Traps, an expert-annotated dataset of 2,893 insect camera trap images (representing 52,948 labeled insects) collected from a global network of automated camera traps, designed to test in-the-wild performance.",
         "href": "https://zenodo.org/records/12554005"
+      },
+      {
+        "title": "UKCEH AMI System",
+        "description": "The UKCEH AMI System consists of UV and white lights for attracting moths, high-capacity data storage to collate images over long sampling periods, battery and solar power to allow for deployment away from mains power, and customisable sampling schedules. The images it collects can be processed through one’s own workflow or using the AMI Data Platform.",
+        "href": "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap"
       }
     ]
   },
