@@ -66,6 +66,7 @@ export default function Page() {
                 width={512}
                 height={512}
                 style={{ width: "100%", height: "auto" }}
+                loading="lazy"
               />
               <Spacer size={10} />
               <p className="bodyExtraSmall">Photo by Anna Viklund</p>
@@ -94,6 +95,7 @@ export default function Page() {
               width={1200}
               height={675}
               style={{ width: "100%", height: "auto" }}
+              loading="lazy"
             />
             <Spacer size={10} />
             <p className="bodyExtraSmall">

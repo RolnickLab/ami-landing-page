@@ -36,6 +36,7 @@ export default function Page() {
           width={1999}
           height={1500}
           style={{ width: "100%", height: "auto" }}
+          loading="lazy"
         />
         <Spacer size={10} />
         <p className="bodySmall">{content.consortium.people.caption}</p>
