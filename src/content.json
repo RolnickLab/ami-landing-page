@@ -179,7 +179,15 @@
   },
   "media": {
     "title": "Media",
-    "list": [
+    "articles": [
+      {
+        "title": "Un algorithme au secours des insectes | Découverte",
+        "description": "Les populations d'insectes s'effondrent à un rythme sans précédent, et il manque de scientifiques pour documenter ce déclin.",
+        "image": "https://images.radio-canada.ca/q_auto,w_1200/v1/ici-tele/emissions/16x9/decouverte-5627-insectarium-ia.jpg",
+        "href": "https://ici.radio-canada.ca/tele/decouverte/site/segments/reportage/1900347/insectarium-intelligence-artificielle-menace-insectes"
+      }
+    ],
+    "videos": [
       {
         "src": "https://www.youtube.com/embed/9MtOHwPSF50?si=Qrjp2qHUuhn1Ui0a",
         "caption": "The UKCEH AMI System deployed in Panama"

@@ -1,3 +1,4 @@
+import { Article } from "@/components/article/article";
 import { LinkButton } from "@/components/button/button";
 import { Card, Cards } from "@/components/card/card";
 import { ExternalLink } from "@/components/external-link/external-link";
@@ -161,7 +162,10 @@ export default function Page() {
       <Section>
         <div className={styles.content}>
           <h1 className="heading1">{content.media.title}</h1>
-          {content.media.list.map(({ src, caption }, index) => (
+          {content.media.articles.map((article, index) => (
+            <Article key={index} {...article} />
+          ))}
+          {content.media.videos.map(({ src, caption }, index) => (
             <Video key={index} src={src} caption={caption} />
           ))}
         </div>

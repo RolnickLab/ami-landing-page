@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background-color: var(--background-tinted);
+  border: 1px solid var(--border);
+}
+
+.image {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.text {
+  padding: 40px;
+  box-sizing: content-box;
+}
+
+@media (max-width: 720px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    aspect-ratio: 16/9;
+  }
+
+  .text {
+    padding: 20px;
+  }
+}
