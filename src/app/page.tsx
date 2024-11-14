@@ -88,14 +88,16 @@ export default function Page() {
 
           <div>
             <Image
-              src="/moths.jpg"
-              alt=""
-              width={1024}
-              height={683}
+              src="/anguilla.jpg"
+              alt="The UKCEH AMI System deployed at Anguilla"
+              width={1200}
+              height={675}
               style={{ width: "100%", height: "auto" }}
             />
             <Spacer size={10} />
-            <p className="bodyExtraSmall">Photo by Michael Bunsen</p>
+            <p className="bodyExtraSmall">
+              The UKCEH AMI System deployed at Anguilla. Photo by Tom August.
+            </p>
           </div>
         </div>
       </Section>
