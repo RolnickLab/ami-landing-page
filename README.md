@@ -1,6 +1,8 @@
-# Automated Monitoring of Insects (AMI)
+# AMI Landing Page
 
-This is the landing page for AMI. The app was setup using [Next.js](https://nextjs.org/) and [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Automated Monitoring of Insects (AMI) is an international consortium of experts developing non-lethal, end-to-end monitoring solutions for automated insect detection and species classification that leverage artificial intelligence (AI).
+
+The landing page was setup using [Next.js](https://nextjs.org/) and [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## System requirements
 
