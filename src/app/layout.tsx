@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer/footer";
 import { TopBar } from "@/components/top-bar/top-bar";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={mono.className}>
         <TopBar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
