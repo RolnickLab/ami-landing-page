@@ -5,9 +5,7 @@ import styles from "./footer.module.css";
 export const Footer = () => (
   <Section theme="tinted" className={styles.footer}>
     <div className={styles.footerContent}>
-      <span className="body" style={{ textTransform: "uppercase" }}>
-        Hosted by
-      </span>
+      <span className="bodyExtraSmall">Hosted by</span>
       <a
         href="https://www.netlify.com/"
         target="_blank"
