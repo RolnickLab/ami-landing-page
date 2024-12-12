@@ -6,13 +6,17 @@ import { Project } from "@/components/project/project";
 import { Section } from "@/components/section/section";
 import { Select } from "@/components/select/select";
 import { Spacer } from "@/components/spacer/spacer";
-import content from "@/content.json";
+import { useContent } from "@/useContent";
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import styles from "./page.module.css";
 
 const ITEM_ALL_ID = "all";
 
 export default function Page() {
+  const t = useTranslations();
+  const content = useContent();
+
   const [category, setCategory] = useState(ITEM_ALL_ID);
   const [partner, setPartner] = useState(ITEM_ALL_ID);
 
@@ -39,17 +43,16 @@ export default function Page() {
     });
 
     return sorted;
-  }, [category, partner]);
+  }, [category, content.projects.list, partner]);
 
   const label = useMemo(() => {
     if (projects.length === 0) {
-      return "No initiatives to show.";
+      return t("INITIATIVES_NO_RESULTS");
     }
-    if (projects.length === 1) {
-      return "Showing 1 initiative:";
-    }
-    return `Showing ${projects.length} initiatives:`;
-  }, [projects]);
+    return t("INITIATIVES_RESULTS", {
+      count: projects.length,
+    });
+  }, [projects.length, t]);
 
   return (
     <>
@@ -60,23 +63,23 @@ export default function Page() {
         <Spacer size={40} />
         <div className={styles.controls}>
           <div className={styles.control}>
-            <span className="bodySmall">Category</span>
+            <span className="bodySmall">{t("COMMON_CATEGORY")}</span>
             <Spacer size={10} />
             <Select
               items={[
                 ...content.categories,
-                { label: "All categories", id: ITEM_ALL_ID },
+                { label: t("COMMON_ALL_CATEGORIES"), id: ITEM_ALL_ID },
               ]}
               value={category}
               onValueChange={setCategory}
             />
           </div>
           <div className={styles.control}>
-            <span className="bodySmall">Member</span>
+            <span className="bodySmall">{t("COMMON_MEMBER")}</span>
             <Spacer size={10} />
             <Select
               items={[
-                { label: "All members", id: ITEM_ALL_ID },
+                { label: t("COMMON_ALL_MEMBERS"), id: ITEM_ALL_ID },
                 ...content.consortium.partners.list,
               ]}
               value={partner}

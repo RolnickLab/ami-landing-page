@@ -1,10 +1,12 @@
 import { List, ListItem, ListItemContent } from "@/components/list/list";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
-import content from "@/content.json";
+import { useContent } from "@/useContent";
 import Image from "next/image";
 
 export default function Page() {
+  const content = useContent();
+
   return (
     <>
       <Section theme="tinted">

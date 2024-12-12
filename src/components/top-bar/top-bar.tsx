@@ -1,7 +1,9 @@
 "use client";
 
+import { useContent } from "@/useContent";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
@@ -11,22 +13,10 @@ import styles from "./top-bar.module.css";
 const CONTACT_MAIL =
   "ami-steering-committe-aaaam3iesbkxe22x3nkrr4c7gm@automatedinse-zlx9399.slack.com";
 
-const MENU_ITEMS = [
-  { label: "Home", labelShort: "Home", href: "/" },
-  {
-    label: "The AMI Initiatives",
-    labelShort: "Initiatives",
-    href: "/initiatives",
-  },
-  {
-    label: "The AMI Consortium",
-    labelShort: "Consortium",
-    href: "/consortium",
-  },
-];
-
 export const TopBar = () => {
   const currentPath = usePathname();
+  const t = useTranslations();
+  const content = useContent();
 
   return (
     <header className={styles.topBar}>
@@ -35,7 +25,7 @@ export const TopBar = () => {
           <AMILogo size={50} />
         </Link>
         <nav className={styles.menu}>
-          {MENU_ITEMS.map((menuItem, index) => (
+          {content.menuItems.map((menuItem, index) => (
             <Link
               key={index}
               href={menuItem.href}
@@ -55,7 +45,7 @@ export const TopBar = () => {
           theme="text"
         >
           <EnvelopeClosedIcon />
-          <span className={styles.label}>Contact Us</span>
+          <span className={styles.label}>{t("COMMON_CONTACT_US")}</span>
         </LinkButton>
       </div>
     </header>

@@ -6,21 +6,25 @@ import { Intro } from "@/components/intro/intro";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
-import content from "@/content.json";
+import { useContent } from "@/useContent";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
 import styles from "./page.module.css";
+import Markdown from "react-markdown";
 
 export default function Page() {
+  const t = useTranslations();
+  const content = useContent();
+
   return (
     <>
       <Section theme="moth">
         <Intro title={content.title} subTitle={content.subTitle} />
         <p className={classNames("bodyExtraSmall", styles.attribution)}>
-          Photo by Michael Bunsen
+          {t("COMMON_PHOTO_BY")} Michael Bunsen
         </p>
       </Section>
 
@@ -52,12 +56,9 @@ export default function Page() {
             <div>
               <h2 className="heading2">{content.about.intro.title}</h2>
               <Spacer size={20} />
-              <p
-                className="body"
-                dangerouslySetInnerHTML={{
-                  __html: content.about.intro.description,
-                }}
-              />
+              <Markdown className="body">
+                {content.about.intro.description}
+              </Markdown>
             </div>
             <div>
               <Image
@@ -69,7 +70,9 @@ export default function Page() {
                 loading="lazy"
               />
               <Spacer size={10} />
-              <p className="bodyExtraSmall">Photo by Anna Viklund</p>
+              <p className="bodyExtraSmall">
+                {t("COMMON_PHOTO_BY")} Anna Viklund
+              </p>
             </div>
           </div>
 
@@ -77,21 +80,14 @@ export default function Page() {
             <h2 className="heading2">{content.about.content.title}</h2>
             <Spacer size={20} />
             <div className={styles.aboutContent}>
-              {content.about.content.description.map((__html, index) => (
-                <Fragment key={index}>
-                  <p className="body" dangerouslySetInnerHTML={{ __html }} />
-                  {index < content.about.content.description.length - 1 && (
-                    <Spacer size={20} />
-                  )}
-                </Fragment>
-              ))}
+              <p className="body">{content.about.content.description}</p>
             </div>
           </div>
 
           <div>
             <Image
               src="/anguilla.jpg"
-              alt="The UKCEH AMI System deployed at Anguilla"
+              alt={t("CAPTION_ANGUILLA")}
               width={1200}
               height={675}
               style={{ width: "100%", height: "auto" }}
@@ -99,7 +95,7 @@ export default function Page() {
             />
             <Spacer size={10} />
             <p className="bodyExtraSmall">
-              The UKCEH AMI System deployed at Anguilla. Photo by Tom August.
+              {t("CAPTION_ANGUILLA")} {t("COMMON_PHOTO_BY")} Tom August.
             </p>
           </div>
         </div>
@@ -110,13 +106,10 @@ export default function Page() {
           <div>
             <h1 className="heading1">{content.projects.title}</h1>
             <Spacer size={20} />
-            <p
-              className="bodyLarge"
-              dangerouslySetInnerHTML={{ __html: content.projects.description }}
-            />
+            <p className="bodyLarge">{content.projects.description}</p>
             <Spacer size={40} />
             <LinkButton href="/initiatives">
-              Checkout the initiatives
+              {t("COMMON_CHECKOUT_INITIATIVES")}
               <ChevronRightIcon />
             </LinkButton>
           </div>
