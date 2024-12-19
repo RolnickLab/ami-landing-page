@@ -160,8 +160,8 @@ export default function Page() {
           {content.media.articles.map((article, index) => (
             <Article key={index} {...article} />
           ))}
-          {content.media.videos.map(({ src, caption }, index) => (
-            <Video key={index} src={src} caption={caption} />
+          {content.media.videos.map(({ src }, index) => (
+            <Video key={index} src={src} />
           ))}
         </div>
       </Section>

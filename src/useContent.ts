@@ -171,17 +171,12 @@ export const useContent = () => {
       videos: [
         {
           src: "https://www.youtube.com/embed/9MtOHwPSF50?si=Qrjp2qHUuhn1Ui0a",
-          caption: "The UKCEH AMI System deployed in Panama",
         },
         {
           src: "https://globalnews.ca/video/embed/10188149/",
-          caption:
-            "How Montreal researchers are using AI to discover new species",
         },
         {
           src: "https://www.youtube.com/embed/VXJ40hAmTZY?si=0Rc2Zgwja_dk4V9P",
-          caption:
-            "Antenna - L'IA pour protéger la biodiversité | Antenna - AI to protect biodiversity",
         },
       ],
     },
