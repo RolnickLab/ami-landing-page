@@ -33,7 +33,7 @@ export const useContent = () => {
       },
       content: {
         title: t("ABOUT_CONTENT_TITLE"),
-        description: t.raw("ABOUT_CONTENT_DESCRIPTION"),
+        description: t("ABOUT_CONTENT_DESCRIPTION"),
       },
     },
     projects: {
@@ -42,109 +42,75 @@ export const useContent = () => {
       list: [
         {
           partners: ["au"],
-          title: "Aage V Jensens Naturfond",
-          description: [
-            "The long-term monitoring of nocturnal insects at Nature Reserves owned and managed by the not-for-profit Charity Aage V Jensens Naturfond started in 2022 and currently has funding to continue until 2028.",
-          ],
+          title: t("INITIATIVE_JENSENS_TITLE"),
+          description: t("INITIATIVE_JENSENS_DESCRIPTION"),
           href: "https://www.avjf.dk/",
           categories: ["software", "hardware", "analysis"],
         },
         {
           partners: ["au"],
-          title:
-            "Biodiversa+ pilot projects (Invasive Alien Species, IAS and Automated Biodiversity Monitoring Stations, ABMS)",
-          description: [
-            "Biodiversa+ pilot projects test and refine biodiversity monitoring approaches across Europe. They contribute to a more unified monitoring scheme through standardisation, technological innovation and by increasing the availability of data. AMI traps are tested as part of the IAS and ABMS Biodiversa+ pilots.",
-          ],
+          title: t("INITIATIVE_BIODIVERSA_TITLE"),
+          description: t("INITIATIVE_BIODIVERSA_DESCRIPTION"),
           href: "https://www.biodiversa.eu/biodiversity-monitoring/pilot/",
           categories: ["software", "hardware", "analysis"],
         },
         {
           partners: ["au"],
-          title: "Modern Approaches to the Monitoring of Biodiversity (MAMBO)",
-          description: [
-            "The Horizon Europe project MAMBO refines insect camera trap functionality by developing deep learning models targeted at the detection and classification of insects. One of the focal tools for MAMBO is the AMI trap.",
-          ],
+          title: t("INITIATIVE_MAMBO_TITLE"),
+          description: t("INITIATIVE_MAMBO_DESCRIPTION"),
           href: "https://www.mambo-project.eu/",
           categories: ["software", "hardware", "analysis"],
         },
         {
           partners: ["usherbrooke", "ulaval"],
-          title: "Moth monitoring under imperfect detection and classification",
-          description: [
-            "AMI will generate unprecedented amounts of site occupancy and abundance data. Regardless of the level of effort involved, however, AMI will never be perfect because not all individuals or species present during the sampling event will be detected and classified without error.",
-            "With a focus on moths, our research aims at adapting and developing sampling schemes and statistical methods for collecting and analysing AMI data to mitigate biases originating from imperfect detection and classification.",
-          ],
+          title: t("INITIATIVE_IMPERFECT_TITLE"),
+          description: t("INITIATIVE_IMPERFECT_DESCRIPTION"),
           categories: ["analysis"],
         },
         {
           partners: ["mila", "espacepourlavie"],
-          title: "Antenna",
-          description: [
-            "The Antenna Data Platform is an interdisciplinary hub for automatically processing insect data at wide spatial, temporal and taxonomic scales.",
-            "The platform uses state-of-the-art machine learning algorithms developed by Mila researchers to detect and classify insects in large volumes of images. Antenna offers a full range of functions:",
-          ],
-          listItems: [
-            "Automated detection of insects in images",
-            "Species-level taxonomic classification of moths",
-            "Expert validation of classifications",
-            "Curation of datasets across species and locations",
-            "Data exploration and download for analysis",
-            "(Coming soon!) New species discovery using the GBIF and Darwin Core Standards",
-          ],
+          title: t("INITIATIVE_ANTENNA_TITLE"),
+          description: t("INITIATIVE_ANTENNA_DESCRIPTION"),
           href: "https://www.insectai.org/",
           categories: ["software"],
         },
         {
           partners: ["natural-resources"],
-          description: [
-            "Natural Resources Canada is employing the Antenna Data Platform to detect and monitor forest pest insect species as well as for forest health monitoring (i.e., insect biodiversity). This work includes the provisioning of insect image data for the platform.",
-          ],
+          description: t("INITIATIVE_NATURAL_RESOURCES_DESCRIPTION"),
           categories: ["analysis"],
         },
         {
           partners: ["turing", "ukceh"],
-          title: "AMBER",
-          description: [
-            "The AMBER project, funded by the Abrdn Charitable Foundation, will develop and trial AMI technology for monitoring nocturnal insects, with a focus on tropical deployments. The project will combine expertise from UKCEH, the Alan Turing institute, and a range of local partners, to push the current generation of AMI hardware to their limits.",
-            "The Alan Turing Institute contributes to the AMBER project by developing and implementing machine learning models for AMI systems. With an emphasis on edge-based processing, these models are optimised to run directly on Raspberry Pi devices, enabling data analysis and species identification to take place entirely in the field. This approach significantly reduces the need for large-scale data transfer and reliance on researchers manually collecting data in person.",
-          ],
+          title: t("INITIATIVE_AMBER_TITLE"),
+          description: t("INITIATIVE_AMBER_DESCRIPTION"),
           href: "https://www.turing.ac.uk/research/research-projects/amber",
           categories: ["software", "analysis"],
         },
         {
           partners: ["ukceh"],
-          title: "UKCEH AMI System",
-          description: [
-            "The UKCEH AMI System consists of UV and white lights for attracting moths, high-capacity data storage to collate images over long sampling periods, battery and solar power to allow for deployment away from mains power, and customisable sampling schedules. The images it collects can be processed through one’s own workflow or using the AMI Data Platform. Work is underway to add additional features to the UKCEH AMI System to widen the taxonomic groups that it can monitor. The addition of audible and ultrasound recording will shortly increase the taxonomic coverage of the trap to include birds, bats, and orthoptera.",
-          ],
+          title: t("INITIATIVE_AMI_SYSTEM_TITLE"),
+          description: t("INITIATIVE_AMI_SYSTEM_DESCRIPTION"),
           href: "https://www.ceh.ac.uk/solutions/equipment/automated-monitoring-insects-trap",
           categories: ["hardware"],
         },
         {
           partners: ["ukceh"],
-          title: "AgZero+",
-          description: [
-            "AgZero+ is an ambitious five-year research programme supporting the UK’s transition towards domestic food production that is sustainable, carbon-neutral and has a positive effect on nature. UKCEH AMI systems are deployed across a range of farms to test their ability to monitor impacts of farming practise on nocturnal insect communities.",
-          ],
+          title: t("INITIATIVE_AGZERO_TITLE"),
+          description: t("INITIATIVE_AGZERO_DESCRIPTION"),
           href: "https://www.ceh.ac.uk/our-science/projects/agzero",
           categories: ["analysis"],
         },
         {
           partners: ["ukceh", "au"],
-          title: "InsectAI",
-          description: [
-            "InsectAI will bring together researchers and stakeholders interested in harnessing new camera and AI technologies for monitoring insects. Together we will direct and drive the research agenda, build research capacity across Europe, and support innovation and application.",
-          ],
+          title: t("INITIATIVE_INSECTAI_TITLE"),
+          description: t("INITIATIVE_INSECTAI_DESCRIPTION"),
           href: "https://insectai.eu/",
           categories: ["knowledge"],
         },
         {
           partners: ["vtecostudies"],
-          title: "Vermont Atlas of Life",
-          description: [
-            "The Vermont Atlas of Life is an ever-growing library of knowledge on Vermont’s biodiversity – an online, real-time resource with maps, photographs, and primary biodiversity data open for anyone to use. As human activity profoundly alters the map of life on local and global scales, our response requires knowledge of plant and animal distributions across vast landscapes and over long periods of time. Vermonters cannot respond effectively to climate change, natural disasters, invasive species, and other environmental and economic threats without a new understanding of the state’s living resources.",
-          ],
+          title: t("INITIATIVE_ATLAS_TITLE"),
+          description: t("INITIATIVE_ATLAS_DESCRIPTION"),
           href: "https://val.vtecostudies.org/",
           categories: ["conservation", "analysis"],
         },
@@ -174,23 +140,18 @@ export const useContent = () => {
       title: t("PUBLICATIONS_TITLE"),
       list: [
         {
-          title:
-            "An Automated Light Trap to Monitor Moths (Lepidoptera) Using Computer Vision-Based Tracking and Deep Learning",
-          description:
-            "We present a portable computer vision system capable of attracting and detecting live insects. More specifically, the paper proposes detection and classification of species by recording images of live individuals attracted to a light trap. An Automated Moth Trap (AMT) with multiple light sources and a camera was designed to attract and monitor live insects during twilight and night hours. A computer vision algorithm referred to as Moth Classification and Counting (MCC), based on deep learning analysis of the captured images, tracked and counted the number of insects and identified moth species.",
+          title: t("PUBLICATION_AMT_TITLE"),
+          description: t("PUBLICATION_AMT_SUMMARY"),
           href: "https://doi.org/10.3390/s21020343",
         },
         {
-          title: "Insect Identification in the Wild: The AMI Dataset",
-          description:
-            "We provide the first large-scale machine learning benchmarks for fine-grained insect recognition, designed to match real-world tasks faced by ecologists.",
+          title: t("PUBLICATION_AMI_DATASET_TITLE"),
+          description: t("PUBLICATION_AMI_DATASET_SUMMARY"),
           href: "https://arxiv.org/abs/2406.12452",
         },
         {
-          title:
-            "Towards a standardized framework for AI-assisted, image-based monitoring of nocturnal insects.",
-          description:
-            "We describe computer vision approaches for the detection, tracking and classification of insects, including models built from existing aggregations of labelled insect images. We propose ten priorities towards a step-change in automated monitoring of nocturnal insects, a vital task in the face of rapid biodiversity loss from global threats.",
+          title: t("PUBLICATION_PHIL_TRANS_TITLE"),
+          description: t("PUBLICATION_PHIL_TRANS_SUMMARY"),
           href: "https://doi.org/10.1098/rstb.2023.0108",
         },
       ],
