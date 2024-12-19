@@ -4,25 +4,35 @@ import classNames from "classnames";
 import styles from "./select.module.css";
 
 export const Select = ({
+  displayLabel,
   items,
   placeholder,
+  position,
   value,
   onValueChange,
 }: {
+  displayLabel?: string;
   items: { id: string; label: string }[];
   placeholder?: string;
+  position?: "popper" | "item-aligned";
   value: string;
   onValueChange: (value: string) => void;
 }) => (
   <SelectPrimitve.Root value={value} onValueChange={onValueChange}>
     <SelectPrimitve.Trigger className={classNames("bodySmall", styles.trigger)}>
-      <SelectPrimitve.Value placeholder={placeholder} />
+      <SelectPrimitve.Value placeholder={placeholder}>
+        {displayLabel}
+      </SelectPrimitve.Value>
       <SelectPrimitve.Icon className={styles.icon}>
         <ChevronDownIcon />
       </SelectPrimitve.Icon>
     </SelectPrimitve.Trigger>
     <SelectPrimitve.Portal>
-      <SelectPrimitve.Content className={styles.content}>
+      <SelectPrimitve.Content
+        className={styles.content}
+        position={position}
+        sideOffset={8}
+      >
         <SelectPrimitve.Viewport className={styles.viewport}>
           <SelectPrimitve.Group>
             {items.map((item) => (

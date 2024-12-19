@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
 import { LinkButton } from "../button/button";
+import { LanguageControl } from "../language-control/language-control";
 import styles from "./top-bar.module.css";
 
 const CONTACT_MAIL =
@@ -47,6 +48,7 @@ export const TopBar = () => {
           <EnvelopeClosedIcon />
           <span className={styles.label}>{t("COMMON_CONTACT_US")}</span>
         </LinkButton>
+        <LanguageControl />
       </div>
     </header>
   );

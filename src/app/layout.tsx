@@ -27,7 +27,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <link rel="icon" type="image/png" href="/logo.png" />
       <body className={mono.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
