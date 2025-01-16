@@ -3,7 +3,7 @@
 import { Locale } from "@/i18n/config";
 import { setUserLocale } from "@/i18n/utils";
 import { useLocale } from "next-intl";
-import { Select } from "../select/select";
+import { LanguageSelect } from "../select/select";
 
 const LANGUGAE_OPTIONS: {
   label: string;
@@ -16,18 +16,13 @@ const LANGUGAE_OPTIONS: {
 
 export const LanguageControl = () => {
   const value = useLocale();
-  const displayLabel = LANGUGAE_OPTIONS.find(
-    (option) => option.locale === value
-  )?.labelShort;
 
   return (
-    <Select
-      displayLabel={displayLabel}
+    <LanguageSelect
       items={LANGUGAE_OPTIONS.map((option) => ({
         id: option.locale,
         label: option.label,
       }))}
-      position="popper"
       value={value}
       onValueChange={(value) => {
         const locale = value as Locale;
