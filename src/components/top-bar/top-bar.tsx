@@ -22,10 +22,10 @@ export const TopBar = () => {
   return (
     <header className={styles.topBar}>
       <div className={styles.topBarContent}>
-        <Link href="/">
-          <AMILogo size={50} />
-        </Link>
         <nav className={styles.menu}>
+          <Link href="/">
+            <AMILogo size={50} />
+          </Link>
           {content.menuItems.map((menuItem, index) => (
             <Link
               key={index}
@@ -42,8 +42,8 @@ export const TopBar = () => {
         </nav>
         <LinkButton
           href={`mailto:${CONTACT_MAIL}`}
-          style={{ color: "var(--text)" }}
-          theme="text"
+          className={styles.contactButton}
+          variant="neutral"
         >
           <MailIcon size={15} />
           <span className={styles.label}>{t("COMMON_CONTACT_US")}</span>

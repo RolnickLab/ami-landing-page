@@ -1,23 +1,21 @@
 .button {
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  color: var(--primary);
-  font-weight: 500;
-  gap: 10px;
-}
-.button * {
-  vertical-align: middle;
-}
-.button.outline {
   gap: 20px;
-  height: 40px;
+  flex-shrink: 0;
   padding: 0 20px;
-  border: 2px solid var(--primary);
   box-sizing: border-box;
+  border: 2px solid transparent;
+  color: var(--text);
+  font-weight: 500;
 }
-.button.outline:focus-visible {
+.button:focus-visible {
   outline: none;
   border-color: var(--text);
+}
+.button.primary {
+  color: var(--primary);
+  border-color: var(--primary);
 }

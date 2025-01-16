@@ -1,25 +1,26 @@
 import classNames from "classnames";
 import Link from "next/link";
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 import styles from "./button.module.css";
 
 export const Button = ({
   children,
-  style,
-  theme = "outline",
+  className,
   onClick,
+  variant = "primary",
 }: {
   children: ReactNode;
-  style?: CSSProperties;
-  theme?: "outline" | "text";
+  className?: string;
   onClick: () => void;
+  variant?: "neutral" | "primary";
 }) => (
   <button
-    className={classNames("bodySmall", styles.button, {
-      [styles.outline]: theme === "outline",
-      [styles.text]: theme === "text",
-    })}
-    style={style}
+    className={classNames(
+      "bodySmall",
+      styles.button,
+      { [styles.primary]: variant === "primary" },
+      className
+    )}
     onClick={onClick}
   >
     {children}
@@ -28,22 +29,23 @@ export const Button = ({
 
 export const LinkButton = ({
   children,
+  className,
   href,
-  theme = "outline",
-  style,
+  variant = "primary",
 }: {
   children: ReactNode;
+  className?: string;
   href: string;
-  theme?: "outline" | "text";
-  style?: CSSProperties;
+  variant?: "neutral" | "primary";
 }) => (
   <Link
-    className={classNames("bodySmall", styles.button, {
-      [styles.outline]: theme === "outline",
-      [styles.text]: theme === "text",
-    })}
+    className={classNames(
+      "bodySmall",
+      styles.button,
+      { [styles.primary]: variant === "primary" },
+      className
+    )}
     href={href}
-    style={style}
   >
     {children}
   </Link>
@@ -51,23 +53,24 @@ export const LinkButton = ({
 
 export const ExternalLinkButton = ({
   children,
+  className,
   href,
-  theme = "outline",
-  style,
+  variant = "primary",
 }: {
   children: ReactNode;
+  className?: string;
   href: string;
-  theme?: "outline" | "text";
-  style?: CSSProperties;
+  variant?: "neutral" | "primary";
 }) => (
   <a
-    className={classNames("bodySmall", styles.button, {
-      [styles.outline]: theme === "outline",
-      [styles.text]: theme === "text",
-    })}
+    className={classNames(
+      "bodySmall",
+      styles.button,
+      { [styles.primary]: variant === "primary" },
+      className
+    )}
     href={href}
     rel="noopener noreferrer"
-    style={style}
     target="_blank"
   >
     {children}
