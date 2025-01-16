@@ -1,6 +1,6 @@
-import { CheckIcon, ChevronDownIcon } from "@radix-ui/react-icons";
 import * as SelectPrimitve from "@radix-ui/react-select";
 import classNames from "classnames";
+import { CheckIcon, ChevronDownIcon, LanguagesIcon } from "lucide-react";
 import styles from "./select.module.css";
 
 export const Select = ({
@@ -18,7 +18,7 @@ export const Select = ({
     <SelectPrimitve.Trigger className={classNames("bodySmall", styles.trigger)}>
       <SelectPrimitve.Value placeholder={placeholder} />
       <SelectPrimitve.Icon className={styles.icon}>
-        <ChevronDownIcon />
+        <ChevronDownIcon size={15} />
       </SelectPrimitve.Icon>
     </SelectPrimitve.Trigger>
     <SelectPrimitve.Portal>
@@ -40,7 +40,7 @@ export const LanguageSelect = ({
     <SelectPrimitve.Trigger
       className={classNames(styles.trigger, styles.language)}
     >
-      <ChevronDownIcon />
+      <LanguagesIcon size={15} />
     </SelectPrimitve.Trigger>
     <SelectPrimitve.Portal>
       <SelectContent items={items} position="popper" />
@@ -70,7 +70,7 @@ const SelectContent = ({
           >
             <SelectPrimitve.ItemText>{item.label}</SelectPrimitve.ItemText>
             <SelectPrimitve.ItemIndicator className={styles.icon}>
-              <CheckIcon />
+              <CheckIcon size={15} />
             </SelectPrimitve.ItemIndicator>
           </SelectPrimitve.Item>
         ))}

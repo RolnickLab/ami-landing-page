@@ -1,8 +1,8 @@
 "use client";
 
 import { useContent } from "@/useContent";
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { MailIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -45,7 +45,7 @@ export const TopBar = () => {
           style={{ color: "var(--text)" }}
           theme="text"
         >
-          <EnvelopeClosedIcon />
+          <MailIcon size={15} />
           <span className={styles.label}>{t("COMMON_CONTACT_US")}</span>
         </LinkButton>
         <LanguageControl />

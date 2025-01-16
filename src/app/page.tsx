@@ -7,13 +7,13 @@ import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
 import { Video } from "@/components/video/video";
 import { useContent } from "@/useContent";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { ChevronRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.css";
 import Markdown from "react-markdown";
+import styles from "./page.module.css";
 
 export default function Page() {
   const t = useTranslations();
@@ -110,7 +110,7 @@ export default function Page() {
             <Spacer size={40} />
             <LinkButton href="/initiatives">
               {t("COMMON_CHECKOUT_INITIATIVES")}
-              <ChevronRightIcon />
+              <ChevronRightIcon size={15} />
             </LinkButton>
           </div>
         </div>

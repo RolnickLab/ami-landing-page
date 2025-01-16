@@ -1,8 +1,8 @@
 import { LinkButton } from "@/components/button/button";
 import { Section } from "@/components/section/section";
 import { Spacer } from "@/components/spacer/spacer";
+import { ChevronLeftIcon } from "lucide-react";
 import styles from "./page.module.css";
-import { ChevronLeftIcon } from "@radix-ui/react-icons";
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
         <h2 className="bodyLarge">This page could not be found.</h2>
         <Spacer size={50} />
         <LinkButton href="/">
-          <ChevronLeftIcon />
+          <ChevronLeftIcon size={15} />
           <span>Back to home</span>
         </LinkButton>
       </div>
