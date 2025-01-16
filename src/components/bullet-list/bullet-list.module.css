@@ -11,11 +11,14 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   color: var(--primary);
+}
+.icon svg {
+  position: absolute;
 }

@@ -10,18 +10,23 @@
   color: var(--text);
   border: 2px solid var(--border);
   box-sizing: border-box;
-  flex-shrink: 1;
-}
-.trigger span {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  flex-shrink: 0;
 }
 .trigger:focus-visible {
   border-color: var(--text);
 }
 .trigger[data-placeholder] {
   color: var(--text-low-contrast);
+}
+.trigger.language {
+  width: 40px;
+  justify-content: center;
+  padding: 0;
+}
+.trigger span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .icon {
@@ -37,7 +42,8 @@
 .content {
   overflow: hidden;
   background-color: var(--background);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
+  z-index: 1;
 }
 
 .viewport {
@@ -60,4 +66,11 @@
   outline: none;
   background-color: var(--primary);
   color: var(--primary-text);
+}
+
+@media (max-width: 720px) {
+  .trigger,
+  .item {
+    font-size: 12px;
+  }
 }

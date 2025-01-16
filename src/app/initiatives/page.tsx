@@ -106,7 +106,7 @@ export default function Page() {
         <Spacer size={20} />
         <Cards style={{ gridTemplateColumns: "1fr" }}>
           {projects.map((project) => (
-            <Card key={project.title}>
+            <Card key={project.title ?? project.partners.join("/")}>
               <Project data={project} />
             </Card>
           ))}

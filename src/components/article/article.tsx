@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon } from "lucide-react";
 import { ExternalLinkButton } from "../button/button";
 import { Spacer } from "../spacer/spacer";
 import styles from "./article.module.css";
@@ -26,7 +26,7 @@ export const Article = ({
       <Spacer size={40} />
       <ExternalLinkButton href={href}>
         Radio Canada
-        <ExternalLinkIcon />
+        <ExternalLinkIcon size={15} />
       </ExternalLinkButton>
     </div>
   </div>

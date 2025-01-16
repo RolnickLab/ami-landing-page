@@ -1,19 +1,17 @@
-import { DotFilledIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { DotIcon } from "lucide-react";
+import { ReactNode } from "react";
 import styles from "./bullet-list.module.css";
 
-export const BulletList = ({ items }: { items: string[] }) => (
-  <ul className={styles.bulletList}>
-    {items.map((item, index) => (
-      <li
-        key={index}
-        className={classNames("bodySmall", styles.bulletListItem)}
-      >
-        <div className={styles.icon}>
-          <DotFilledIcon />
-        </div>
-        <span>{item}</span>
-      </li>
-    ))}
-  </ul>
+export const BulletList = ({ children }: { children: ReactNode }) => (
+  <ul className={styles.bulletList}>{children}</ul>
+);
+
+export const BulletListItem = ({ children }: { children: ReactNode }) => (
+  <li className={classNames("bodySmall", styles.bulletListItem)}>
+    <div className={styles.icon}>
+      <DotIcon size={30} />
+    </div>
+    <span>{children}</span>
+  </li>
 );

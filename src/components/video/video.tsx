@@ -7,7 +7,7 @@ import styles from "./video.module.css";
 
 const RATIO = 16 / 9;
 
-export const Video = ({ caption, src }: { caption: string; src: string }) => {
+export const Video = ({ caption, src }: { caption?: string; src: string }) => {
   const windowSize = useWindowSize();
   const containerRef = useRef<HTMLDivElement>(null);
   const [videoWidth, setVideoWidth] = useState<number>(720);
@@ -33,8 +33,12 @@ export const Video = ({ caption, src }: { caption: string; src: string }) => {
           allowFullScreen
         />
       </div>
-      <Spacer size={10} />
-      <p className="bodySmall">{caption}</p>
+      {caption && (
+        <>
+          <Spacer size={10} />
+          <p className="bodySmall">{caption}</p>
+        </>
+      )}
     </div>
   );
 };

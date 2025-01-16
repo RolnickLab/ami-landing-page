@@ -1,7 +1,8 @@
 import { useContent } from "@/useContent";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { BulletList } from "../bullet-list/bullet-list";
+import Markdown from "react-markdown";
+import { BulletList, BulletListItem } from "../bullet-list/bullet-list";
 import { ExternalLinkButton } from "../button/button";
 import styles from "./project.module.css";
 
@@ -12,7 +13,7 @@ export const Project = ({
     title?: string;
     partners: string[];
     categories: string[];
-    description: string[];
+    description: string;
     listItems?: string[];
     href?: string;
   };
@@ -61,17 +62,20 @@ export const Project = ({
         </div>
       </div>
       <div className={styles.group}>
-        {data.description.map((content, index) => (
-          <p key={index} className="bodySmall">
-            {content}
-          </p>
-        ))}
-        {data.listItems?.length ? <BulletList items={data.listItems} /> : null}
+        <Markdown
+          className="bodySmall"
+          components={{
+            ul: (props) => <BulletList>{props.children}</BulletList>,
+            li: (props) => <BulletListItem>{props.children}</BulletListItem>,
+          }}
+        >
+          {data.description}
+        </Markdown>
       </div>
       {data.href ? (
         <ExternalLinkButton href={data.href}>
           <span>{t("COMMON_LEARN_MORE")}</span>
-          <ExternalLinkIcon />
+          <ExternalLinkIcon size={15} />
         </ExternalLinkButton>
       ) : null}
     </div>

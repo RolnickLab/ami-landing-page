@@ -1,13 +1,14 @@
 "use client";
 
 import { useContent } from "@/useContent";
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { MailIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AMILogo } from "../ami-logo/ami-logo";
 import { LinkButton } from "../button/button";
+import { LanguageControl } from "../language-control/language-control";
 import styles from "./top-bar.module.css";
 
 const CONTACT_MAIL =
@@ -21,10 +22,10 @@ export const TopBar = () => {
   return (
     <header className={styles.topBar}>
       <div className={styles.topBarContent}>
-        <Link href="/">
-          <AMILogo size={50} />
-        </Link>
         <nav className={styles.menu}>
+          <Link href="/">
+            <AMILogo size={50} />
+          </Link>
           {content.menuItems.map((menuItem, index) => (
             <Link
               key={index}
@@ -41,12 +42,13 @@ export const TopBar = () => {
         </nav>
         <LinkButton
           href={`mailto:${CONTACT_MAIL}`}
-          style={{ color: "var(--text)" }}
-          theme="text"
+          className={styles.contactButton}
+          variant="neutral"
         >
-          <EnvelopeClosedIcon />
+          <MailIcon size={15} />
           <span className={styles.label}>{t("COMMON_CONTACT_US")}</span>
         </LinkButton>
+        <LanguageControl />
       </div>
     </header>
   );
