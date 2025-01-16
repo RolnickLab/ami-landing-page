@@ -59,6 +59,7 @@ const SelectContent = ({
     className={styles.content}
     position={position}
     sideOffset={8}
+    align="end"
   >
     <SelectPrimitve.Viewport className={styles.viewport}>
       <SelectPrimitve.Group>
